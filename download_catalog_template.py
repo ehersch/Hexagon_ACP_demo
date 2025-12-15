@@ -1,28 +1,50 @@
+import argparse
 import requests
 import json
 import time
 
-# ============================================
-# FILL THIS IN - Replace with your store domain
-# Examples: "moderncitizen.com", "www.aloyoga.com", "skims.com"
-# ============================================
-STORE = "www.domain.com"  # <-- CHANGE THIS
+parser = argparse.ArgumentParser(description="Download catalog via Shopify MCP.")
+parser.add_argument(
+    "--store",
+    default="skims.com",
+    help="Store domain (e.g. hexagon.com, www.example.com)",
+)
+parser.add_argument(
+    "--max-products",
+    type=int,
+    default=300,
+    help="Maximum products to fetch (default 300, set to 0 for unlimited)",
+)
+parser.add_argument(
+    "--output",
+    default=None,
+    help="Output file path (default <store>_catalog.json).",
+)
 
-# Optional: Set to None for unlimited
-MAX_PRODUCTS = 300
+args = parser.parse_args()
+STORE = args.store
+MAX_PRODUCTS = None if args.max_products == 0 else args.max_products
 
-# ============================================
-# No need to edit below this line
-# ============================================
+STORE_NAME = (
+    STORE.replace("www.", "")
+    .replace(".com", "")
+    .replace(".co", "")
+    .replace(".br", "")
+    .replace(".", "_")
+)
+OUTPUT_FILE = args.output or f"{STORE_NAME}_catalog.json"
 
 URL = f"https://{STORE}/api/mcp"
-STORE_NAME = STORE.replace("www.", "").replace(".com", "").replace(".co", "").replace(".br", "").replace(".", "_")
-OUTPUT_FILE = f"{STORE_NAME}_catalog.json"
+
 
 def call(method, params=None):
     try:
-        r = requests.post(URL, json={"jsonrpc": "2.0", "id": 1, "method": method, "params": params or {}},
-                          headers={"Content-Type": "application/json", "Accept": "application/json"}, timeout=60)
+        r = requests.post(
+            URL,
+            json={"jsonrpc": "2.0", "id": 1, "method": method, "params": params or {}},
+            headers={"Content-Type": "application/json", "Accept": "application/json"},
+            timeout=60,
+        )
         if r.status_code != 200:
             print(f"HTTP {r.status_code}: {r.text[:200]}")
             return None
@@ -34,8 +56,16 @@ def call(method, params=None):
         print(f"Error: {e}")
         return None
 
+
 print(f"Connecting to {STORE}...")
-result = call("initialize", {"protocolVersion": "2024-11-05", "capabilities": {}, "clientInfo": {"name": "dl", "version": "1.0"}})
+result = call(
+    "initialize",
+    {
+        "protocolVersion": "2024-11-05",
+        "capabilities": {},
+        "clientInfo": {"name": "dl", "version": "1.0"},
+    },
+)
 
 if not result:
     print(f"\n❌ {STORE} does not support Shopify MCP")
@@ -53,35 +83,35 @@ page = 1
 while True:
     if MAX_PRODUCTS and len(all_products) >= MAX_PRODUCTS:
         break
-    
+
     print(f"Page {page}...", end=" ", flush=True)
-    
+
     args = {"query": "*", "context": "catalog", "limit": 100}
     if cursor:
         args["after"] = cursor
-    
+
     result = call("tools/call", {"name": "search_shop_catalog", "arguments": args})
     if not result:
         break
-    
+
     content = result.get("result", {}).get("content", [])
     if not content:
         break
-    
+
     text_content = content[0].get("text", "{}") if content else "{}"
     data = json.loads(text_content)
-    
+
     products = data.get("products", [])
     print(f"{len(products)} products")
     all_products.extend(products)
-    
+
     pagination = data.get("pagination", {})
     cursor = pagination.get("endCursor")
     has_next = pagination.get("hasNextPage", False)
-    
+
     if not has_next or not cursor or len(products) == 0:
         break
-    
+
     page += 1
     time.sleep(0.3)
 

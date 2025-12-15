@@ -6,11 +6,14 @@ import Stripe from 'stripe';
 import { fileURLToPath } from 'url';
 import crypto from 'crypto';
 import cron from 'node-cron';
+import { spawn } from 'child_process';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
-const productsFilePath = path.join(__dirname, 'products.json');
+const baseProductsFilePath = path.join(__dirname, 'products.json');
+const externalRawProductsFilePath = path.join(__dirname, 'mcp_catalog_raw.json');
+const externalProductsFilePath = path.join(__dirname, 'external_products.json');
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY ?? '';
 const stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY ?? '';
 const stripeConfigured = Boolean(stripeSecretKey);
@@ -18,12 +21,16 @@ const shopifyStoreDomain = process.env.SHOPIFY_STORE_DOMAIN ?? ''; // e.g. hexag
 const shopifyAccessToken = process.env.SHOPIFY_ACCESS_TOKEN ?? '';
 const shopifyWebhookSecret = process.env.SHOPIFY_WEBHOOK_SECRET ?? '';
 const shopifyApiVersion = process.env.SHOPIFY_API_VERSION ?? '2024-01';
+const mcpStoreDomain = process.env.MCP_STORE ?? '';
+const mcpMaxProducts = process.env.MCP_MAX_PRODUCTS ?? '';
+const useMcpScraper = Boolean(mcpStoreDomain);
+const mcpScriptPath = path.join(__dirname, 'download_catalog_template.py');
 
 if (!stripeConfigured) {
 	console.warn('STRIPE_SECRET_KEY is not set. PaymentIntents will be mocked.');
 }
 
-if (!shopifyStoreDomain || !shopifyAccessToken) {
+if (!useMcpScraper && (!shopifyStoreDomain || !shopifyAccessToken)) {
 	console.warn('Shopify credentials missing. Initial product sync will fail until SHOPIFY_STORE_DOMAIN and SHOPIFY_ACCESS_TOKEN are provided.');
 }
 
@@ -31,7 +38,8 @@ const stripe = stripeConfigured ? new Stripe(stripeSecretKey, { apiVersion: '202
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-let productsCache = [];
+let baseProductsCache = [];
+let externalProductsCache = [];
 
 app.use(express.static(__dirname));
 
@@ -53,7 +61,7 @@ app.post('/webhooks/shopify/products', shopifyWebhookMiddleware, async (req, res
 	}
 
 	try {
-		await refreshProductsFromShopify('webhook');
+		await refreshBaseProducts('webhook');
 		res.status(200).send('ok');
 	} catch (error) {
 		console.error('Failed to refresh products from webhook:', error);
@@ -107,17 +115,34 @@ app.listen(PORT, () => {
 });
 
 async function loadProducts() {
-	if (!productsCache.length) {
+	if (!baseProductsCache.length) {
 		try {
-			const raw = await fs.readFile(productsFilePath, 'utf-8');
-			productsCache = JSON.parse(raw);
+			baseProductsCache = await readJsonFile(baseProductsFilePath);
 		} catch (error) {
-			console.warn('Failed to read products from disk, attempting Shopify fetch...', error);
-			await refreshProductsFromShopify('lazy-load');
+			console.warn('Failed to read base products from disk:', error);
+			try {
+				await refreshBaseProducts('lazy-load');
+			} catch (refreshError) {
+				console.warn('Base product refresh failed during lazy-load:', refreshError);
+				baseProductsCache = [];
+			}
 		}
 	}
 
-	const products = productsCache;
+	if (useMcpScraper && !externalProductsCache.length) {
+		try {
+			externalProductsCache = await readJsonFile(externalProductsFilePath);
+		} catch (_error) {
+			try {
+				await refreshExternalProducts('lazy-load');
+			} catch (refreshError) {
+				 console.warn('External product refresh failed during lazy-load:', refreshError);
+				 externalProductsCache = [];
+			}
+		}
+	}
+
+	const products = [...baseProductsCache, ...externalProductsCache];
 
 	return products
 		.filter((product) => product?.status !== 'draft')
@@ -234,7 +259,7 @@ function formatPrice(amount) {
 	return `$${amount.toFixed(2)}`;
 }
 
-async function refreshProductsFromShopify(reason = 'manual') {
+async function refreshBaseProducts(reason = 'manual') {
 	if (!shopifyStoreDomain || !shopifyAccessToken) {
 		throw new Error('Missing Shopify credentials');
 	}
@@ -252,16 +277,163 @@ async function refreshProductsFromShopify(reason = 'manual') {
 	}
 
 	const data = await response.json();
-	productsCache = data.products ?? [];
-	await fs.writeFile(productsFilePath, JSON.stringify(productsCache, null, 2));
+	baseProductsCache = data.products ?? [];
+	await fs.writeFile(baseProductsFilePath, JSON.stringify(baseProductsCache, null, 2));
 }
 
-refreshProductsFromShopify('startup').catch((error) => {
+async function refreshExternalProducts(reason = 'manual') {
+	if (!useMcpScraper) {
+		return;
+	}
+
+	await runMcpScraper(reason);
+}
+
+async function runMcpScraper(reason = 'manual') {
+	if (!mcpStoreDomain) {
+		throw new Error('MCP_STORE is not configured');
+	}
+
+	console.log(`[${new Date().toISOString()}] Refreshing products via MCP (${reason})`);
+	const args = [mcpScriptPath, '--store', mcpStoreDomain, '--output', externalRawProductsFilePath];
+
+	if (mcpMaxProducts) {
+		args.push('--max-products', mcpMaxProducts);
+	}
+
+	return new Promise((resolve, reject) => {
+		const child = spawn('python3', args, { cwd: __dirname, stdio: 'inherit' });
+		child.on('exit', (code) => {
+			if (code !== 0) {
+				reject(new Error(`MCP scraper exited with code ${code}`));
+				return;
+			}
+
+			readJsonFile(externalRawProductsFilePath)
+				.then((rawProducts) => rawProducts.map(transformMcpProduct))
+				.then(async (transformed) => {
+					externalProductsCache = transformed;
+					await fs.writeFile(externalProductsFilePath, JSON.stringify(transformed, null, 2));
+					resolve();
+				})
+				.catch(reject);
+		});
+	});
+}
+
+async function readJsonFile(filePath) {
+	const raw = await fs.readFile(filePath, 'utf-8');
+	return JSON.parse(raw);
+}
+
+function transformMcpProduct(product, index) {
+	const productId = extractNumericId(product.product_id) ?? `mcp_${index}`;
+	const variants = Array.isArray(product.variants)
+		? product.variants.map((variant, variantIndex) => ({
+				id: extractNumericId(variant.variant_id) ?? `mcp_var_${index}_${variantIndex}`,
+				product_id: productId,
+				title: variant.title ?? 'Default',
+				price: String(variant.price ?? product.price_range?.min ?? '0.00'),
+				position: variantIndex + 1,
+				inventory_quantity: variant.available === false ? 0 : 999,
+				available: variant.available !== false,
+				option1: variant.title ?? 'Default',
+				sku: variant.sku ?? null
+		  }))
+		: [
+				{
+					id: `mcp_var_${index}_0`,
+					product_id: productId,
+					title: 'Default',
+					price: String(product.price_range?.min ?? '0.00'),
+					position: 1,
+					inventory_quantity: product.available === false ? 0 : 999,
+					available: product.available !== false,
+					option1: 'Default',
+					sku: null
+				}
+		  ];
+
+	const imageSrc = product.image_url ?? product.images?.[0]?.url ?? '';
+
+	return {
+		id: productId,
+		title: product.title ?? 'Untitled',
+		body_html: product.description ? `<p>${product.description}</p>` : '',
+		vendor: product.vendor ?? getMcpVendor(),
+		product_type: product.product_type ?? '',
+		status: variants.some((variant) => variant.available) ? 'active' : 'draft',
+		tags: Array.isArray(product.tags) ? product.tags.join(', ') : product.tags ?? '',
+		variants,
+		options: [
+			{
+				id: `mcp_option_${productId}`,
+				product_id: productId,
+				name: 'Title',
+				position: 1,
+				values: variants.map((variant) => variant.title)
+			}
+		],
+		image: imageSrc
+			? {
+					id: `mcp_image_${productId}`,
+					src: imageSrc,
+					position: 1,
+					product_id: productId
+			  }
+			: null,
+		images: imageSrc
+			? [
+					{
+						id: `mcp_image_${productId}`,
+						src: imageSrc,
+						position: 1,
+						product_id: productId
+					}
+			  ]
+			: [],
+		price_display: formatPrice(Number(product.price_range?.min ?? variants[0]?.price ?? 0))
+	};
+}
+
+function extractNumericId(gid = '') {
+	if (typeof gid !== 'string') return null;
+	const parts = gid.split('/');
+	const last = parts[parts.length - 1];
+	const numeric = Number(last);
+	return Number.isFinite(numeric) ? numeric : null;
+}
+
+function getMcpVendor() {
+	if (!mcpStoreDomain) {
+		return 'External Store';
+	}
+
+	try {
+		return new URL(`https://${mcpStoreDomain}`).hostname;
+	} catch (_error) {
+		return 'External Store';
+	}
+}
+
+refreshBaseProducts('startup').catch((error) => {
 	console.error('Initial Shopify sync failed:', error);
 });
 
+refreshExternalProducts('startup').catch((error) => {
+	if (useMcpScraper) {
+		console.error('Initial MCP sync failed:', error);
+	}
+});
+
 cron.schedule('* * * * *', () => {
-	refreshProductsFromShopify('cron-1m').catch((error) => {
+	refreshBaseProducts('cron-1m').catch((error) => {
 		console.error('Scheduled Shopify sync failed:', error);
+	});
+
+	refreshExternalProducts('cron-1m').catch((error) => {
+		if (useMcpScraper) {
+			console.error('Scheduled MCP sync failed:', error);
+		}
 	});
 });
