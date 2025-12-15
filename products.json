@@ -1,0 +1,1192 @@
+[
+  {
+    "id": 9552986570917,
+    "title": "Algae Refresh Mist",
+    "body_html": "<div>\n<div class=\"grid-cols-1 grid gap-2.5 [&amp;_&gt;_*]:min-w-0\">\n<p class=\"font-claude-response-body whitespace-normal break-words\">Transport your skin to the sea with our Algae Refresh Mist—a micro-fine hydrating spray infused with three types of sustainably harvested marine algae. Unlike ordinary face mists that evaporate and leave skin drier, our formula contains Spirulina, Chlorella, and Wakame seaweed that bind moisture to the skin and deliver 72-hour sustained hydration.</p>\n</div>\n</div>\n<div>\n<div class=\"grid-cols-1 grid gap-2.5 [&amp;_&gt;_*]:min-w-0\">\n<p class=\"font-claude-response-body whitespace-normal break-words\">This versatile mist works as a toner, makeup setting spray, and midday refresher. The cooling formula calms irritation on contact, making it perfect for post-workout, post-flight, or after sun exposure. Packaged in a recyclable aluminum bottle with an ultra-fine atomizer that won't disturb makeup.</p>\n</div>\n</div>",
+    "vendor": "Hexagon Stores",
+    "product_type": "Treatments",
+    "created_at": "2025-11-28T13:04:36-08:00",
+    "handle": "algae-refresh-mist",
+    "updated_at": "2025-12-01T07:50:11-08:00",
+    "published_at": "2025-11-28T13:04:36-08:00",
+    "template_suffix": null,
+    "published_scope": "global",
+    "tags": "acne, Award:Minty Mineral Hydration Mist, BDAYSALE, codes for employee sale, cyber, Dryness, Dullness & Uneven Texture, ewg, facial mist, Filter: Algae: Calm + Balance, Filter: Cleansers + Mists, Filter: Congested + Blemish-Prone, Filter: Dryness, Filter: Dullness + Uneven Texture, Filter: Full Size, Filter: Oily Skin + Pores, kelp, Large pores, Lavender mist, MMHM, NBCU, Oily Skin & Pores, palo, palo santa, palo santal, palo santo, pregnancy safe, QVC, rose mist, sensitive, sensitive skin, Shop All Products, spray, SS30, sub, subs, subsc, the holiday shop, toner, vegan",
+    "status": "active",
+    "admin_graphql_api_id": "gid://shopify/Product/9552986570917",
+    "variants": [
+      {
+        "id": 46392293556389,
+        "product_id": 9552986570917,
+        "title": "100ml",
+        "price": "46.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "55.00",
+        "option1": "100ml",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:36-08:00",
+        "updated_at": "2025-11-28T13:04:36-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 200,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "ALGAE-MIST-001",
+        "weight": 200,
+        "weight_unit": "g",
+        "inventory_item_id": 48500042236069,
+        "inventory_quantity": 40,
+        "old_inventory_quantity": 40,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392293556389",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495416885413,
+        "product_id": 9552986570917,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "100ml"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820407586981,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552986570917,
+        "created_at": "2025-11-28T13:04:36-08:00",
+        "updated_at": "2025-11-28T13:04:38-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396169928869",
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/AAmist_100mL_Bottle_Crop.jpg?v=1764363878",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820407586981,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552986570917,
+      "created_at": "2025-11-28T13:04:36-08:00",
+      "updated_at": "2025-11-28T13:04:38-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396169928869",
+      "width": 1200,
+      "height": 1200,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/AAmist_100mL_Bottle_Crop.jpg?v=1764363878",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9552985063589,
+    "title": "Beauty Organizer | Holiday 2025",
+    "body_html": "<p class=\"font-claude-response-body whitespace-normal break-words\">Keep your skincare and makeup collection beautifully organized with our limited-edition Holiday 2025 Beauty Organizer. This thoughtfully designed storage solution features multiple compartments sized specifically for skincare bottles, serums, makeup brushes, and palettes.</p>\n<p class=\"font-claude-response-body whitespace-normal break-words\">Crafted from premium vegan leather in a soft neutral tone, this organizer looks elegant on any vanity, bathroom counter, or dresser. The structured design keeps products upright and visible, so you can actually use everything you own instead of forgetting about products stuffed in drawers.</p>",
+    "vendor": "Hexagon Stores",
+    "product_type": "GWP",
+    "created_at": "2025-11-28T13:04:29-08:00",
+    "handle": "beauty-organizer-holiday-2025",
+    "updated_at": "2025-12-15T11:19:26-08:00",
+    "published_at": "2025-11-28T13:04:29-08:00",
+    "template_suffix": null,
+    "published_scope": "global",
+    "tags": "FREEGIFT_HIDDEN, GWP, hidden, Holiday25",
+    "status": "active",
+    "admin_graphql_api_id": "gid://shopify/Product/9552985063589",
+    "variants": [
+      {
+        "id": 46392291950757,
+        "product_id": 9552985063589,
+        "title": "One Size",
+        "price": "0.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "25.00",
+        "option1": "One Size",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:30-08:00",
+        "updated_at": "2025-12-15T11:19:26-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 300,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "BEAUTY-BAG-001",
+        "weight": 300,
+        "weight_unit": "g",
+        "inventory_item_id": 48500040630437,
+        "inventory_quantity": 20,
+        "old_inventory_quantity": 20,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392291950757",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495415279781,
+        "product_id": 9552985063589,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "One Size"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820401066149,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552985063589,
+        "created_at": "2025-11-28T13:04:30-08:00",
+        "updated_at": "2025-11-28T13:04:31-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396163539109",
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/Holiday25_GWPBag_Main_Crop_15f3e5c9-14b7-4696-8fe7-a0d10ea9a18f.jpg?v=1764363872",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820401066149,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552985063589,
+      "created_at": "2025-11-28T13:04:30-08:00",
+      "updated_at": "2025-11-28T13:04:31-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396163539109",
+      "width": 1200,
+      "height": 1200,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/Holiday25_GWPBag_Main_Crop_15f3e5c9-14b7-4696-8fe7-a0d10ea9a18f.jpg?v=1764363872",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9552985620645,
+    "title": "Botanical Retinol Alternative Moisturizer",
+    "body_html": "<p class=\"font-claude-response-body whitespace-normal break-words\">Get all the age-defying benefits of retinol—none of the irritation, peeling, or sun sensitivity. Our Botanical Retinol Alternative Moisturizer features Bakuchiol, a plant-derived compound clinically proven to deliver comparable results to retinol, plus a supporting cast of gentle yet effective botanical actives.</p>\n<p class=\"font-claude-response-body whitespace-normal break-words\">This rich, nourishing night cream stimulates collagen production, accelerates cell turnover, and softens fine lines without compromising your skin barrier. It's pregnancy-safe, breastfeeding-safe, and perfect for sensitive skin types who've never been able to tolerate traditional retinoids. The luxurious texture melts into skin and works overnight so you wake up to visibly firmer, smoother, more youthful-looking skin.</p>",
+    "vendor": "Hexagon Stores",
+    "product_type": "Moisturizers",
+    "created_at": "2025-11-28T13:04:32-08:00",
+    "handle": "botanical-retinol-alternative-moisturizer",
+    "updated_at": "2025-12-01T07:57:46-08:00",
+    "published_at": "2025-11-28T13:04:32-08:00",
+    "template_suffix": null,
+    "published_scope": "global",
+    "tags": "__label:NEW, acai, acne, age defying du, Anti-Aging, AUGSALE24, bakuchiol, BDAYSALE, codes for employee sale, Cortina, cyber, Dryness, Dullness & Uneven Texture, EOY Sale 2024, ewg, Filter: Aging Protection, Filter: Bakuchiol: Firm + Smooth, Filter: Dryness, Filter: Full Size, Filter: Lines + Wrinkles, Filter: Moisturizers, Filter: New, Filter: Refill Pod, Filter: Sensitivity + Redness, Filter: Travel Size, MIDYEARSALE, moist, Moisturisers, Moust, NBCU, neck, night cream, PSCRAM, QVC, retinal, rose hip, sensitive, sensitive skin, Sept23, Shop All Products, travel size, trial, Uneven Tone & Dark Spots, vegan",
+    "status": "active",
+    "admin_graphql_api_id": "gid://shopify/Product/9552985620645",
+    "variants": [
+      {
+        "id": 46392292671653,
+        "product_id": 9552985620645,
+        "title": "30ml",
+        "price": "13.75",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "17.50",
+        "option1": "30ml",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:32-08:00",
+        "updated_at": "2025-11-28T13:04:32-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 120,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "BOT-RET-MOIST-001",
+        "weight": 120,
+        "weight_unit": "g",
+        "inventory_item_id": 48500041351333,
+        "inventory_quantity": 50,
+        "old_inventory_quantity": 50,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392292671653",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495415935141,
+        "product_id": 9552985620645,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "30ml"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820404080805,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552985620645,
+        "created_at": "2025-11-28T13:04:32-08:00",
+        "updated_at": "2025-11-28T13:04:34-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396166357157",
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/1_PDP_Commercial-PSCRAM_50mL_RefillPod_V1.jpg?v=1764363874",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820404080805,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552985620645,
+      "created_at": "2025-11-28T13:04:32-08:00",
+      "updated_at": "2025-11-28T13:04:34-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396166357157",
+      "width": 1200,
+      "height": 1200,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/1_PDP_Commercial-PSCRAM_50mL_RefillPod_V1.jpg?v=1764363874",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9552984506533,
+    "title": "Essential Favorites Trio",
+    "body_html": "<p class=\"font-claude-response-body whitespace-normal break-words\">Not sure where to begin? The Essential Favorites Trio brings together our three most universally loved products into one perfectly curated starter set. This collection addresses the fundamentals every skin type needs: hydration, protection, and radiance.</p>\n<p class=\"font-claude-response-body whitespace-normal break-words\">Each product in this trio works beautifully alone and even better together, creating a simple but effective 3-step routine that takes under 2 minutes. Perfect for skincare beginners, minimalists, or anyone wanting to try our bestsellers before building a full routine.</p>",
+    "vendor": "Hexagon Stores",
+    "product_type": "Virtual Kit",
+    "created_at": "2025-11-28T13:04:27-08:00",
+    "handle": "essential-favorites-trio",
+    "updated_at": "2025-12-01T08:00:42-08:00",
+    "published_at": null,
+    "template_suffix": null,
+    "published_scope": "web",
+    "tags": "bundle, bundles, christmas, codes for employee sale, cyber, ewg, Filter: Sets, gift, gift set, gift sets, giftsets, holiday, Holiday Gift Sets, holiday kit, holiday sets, Holiday25, pregnancy safe, Shop All Products, the holiday shop, tum, tumer, tumeric, tumeroc",
+    "status": "draft",
+    "admin_graphql_api_id": "gid://shopify/Product/9552984506533",
+    "variants": [
+      {
+        "id": 46392291360933,
+        "product_id": 9552984506533,
+        "title": "One Size",
+        "price": "87.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "105.00",
+        "option1": "One Size",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:27-08:00",
+        "updated_at": "2025-11-28T13:04:27-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 280,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "FAV-TRIO-001",
+        "weight": 280,
+        "weight_unit": "g",
+        "inventory_item_id": 48500040040613,
+        "inventory_quantity": 0,
+        "old_inventory_quantity": 0,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392291360933",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495414722725,
+        "product_id": 9552984506533,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "One Size"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820398379173,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552984506533,
+        "created_at": "2025-11-28T13:04:27-08:00",
+        "updated_at": "2025-11-28T13:04:29-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396160917669",
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/Holiday25_BestSellers_Box_Crop.jpg?v=1764363869",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820398379173,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552984506533,
+      "created_at": "2025-11-28T13:04:27-08:00",
+      "updated_at": "2025-11-28T13:04:29-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396160917669",
+      "width": 1200,
+      "height": 1200,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/Holiday25_BestSellers_Box_Crop.jpg?v=1764363869",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9633384169637,
+    "title": "Example product",
+    "body_html": null,
+    "vendor": "Hexagon Store",
+    "product_type": "",
+    "created_at": "2025-11-30T18:32:30-08:00",
+    "handle": "beauty-example-product-1",
+    "updated_at": "2025-11-30T19:46:30-08:00",
+    "published_at": null,
+    "template_suffix": null,
+    "published_scope": "web",
+    "tags": "Sample Product",
+    "status": "draft",
+    "admin_graphql_api_id": "gid://shopify/Product/9633384169637",
+    "variants": [
+      {
+        "id": 46475030462629,
+        "product_id": 9633384169637,
+        "title": "Default Title",
+        "price": "100.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": null,
+        "option1": "Default Title",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-30T18:32:30-08:00",
+        "updated_at": "2025-11-30T18:32:30-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 0,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": null,
+        "weight": 0,
+        "weight_unit": "lb",
+        "inventory_item_id": 48582869123237,
+        "inventory_quantity": 0,
+        "old_inventory_quantity": 0,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46475030462629",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12576627359909,
+        "product_id": 9633384169637,
+        "name": "Title",
+        "position": 1,
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43988727464101,
+        "alt": null,
+        "position": 1,
+        "product_id": 9633384169637,
+        "created_at": "2025-11-30T18:32:30-08:00",
+        "updated_at": "2025-11-30T18:32:30-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34562754511013",
+        "width": 2364,
+        "height": 2364,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/beauty-product-1.jpg?v=1764556350",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43988727464101,
+      "alt": null,
+      "position": 1,
+      "product_id": 9633384169637,
+      "created_at": "2025-11-30T18:32:30-08:00",
+      "updated_at": "2025-11-30T18:32:30-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34562754511013",
+      "width": 2364,
+      "height": 2364,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/beauty-product-1.jpg?v=1764556350",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9633384857765,
+    "title": "Example product",
+    "body_html": null,
+    "vendor": "Hexagon Store",
+    "product_type": "",
+    "created_at": "2025-11-30T18:32:31-08:00",
+    "handle": "beauty-example-product-2",
+    "updated_at": "2025-11-30T19:46:31-08:00",
+    "published_at": null,
+    "template_suffix": null,
+    "published_scope": "web",
+    "tags": "Sample Product",
+    "status": "draft",
+    "admin_graphql_api_id": "gid://shopify/Product/9633384857765",
+    "variants": [
+      {
+        "id": 46475031150757,
+        "product_id": 9633384857765,
+        "title": "Default Title",
+        "price": "100.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": null,
+        "option1": "Default Title",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-30T18:32:31-08:00",
+        "updated_at": "2025-11-30T18:32:31-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 0,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": null,
+        "weight": 0,
+        "weight_unit": "lb",
+        "inventory_item_id": 48582869811365,
+        "inventory_quantity": 0,
+        "old_inventory_quantity": 0,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46475031150757",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12576628048037,
+        "product_id": 9633384857765,
+        "name": "Title",
+        "position": 1,
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43988729462949,
+        "alt": null,
+        "position": 1,
+        "product_id": 9633384857765,
+        "created_at": "2025-11-30T18:32:31-08:00",
+        "updated_at": "2025-11-30T18:32:31-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34562756018341",
+        "width": 2364,
+        "height": 2364,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/beauty-product-2.jpg?v=1764556351",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43988729462949,
+      "alt": null,
+      "position": 1,
+      "product_id": 9633384857765,
+      "created_at": "2025-11-30T18:32:31-08:00",
+      "updated_at": "2025-11-30T18:32:31-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34562756018341",
+      "width": 2364,
+      "height": 2364,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/beauty-product-2.jpg?v=1764556351",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9633385676965,
+    "title": "Example product",
+    "body_html": null,
+    "vendor": "Hexagon Store",
+    "product_type": "",
+    "created_at": "2025-11-30T18:32:33-08:00",
+    "handle": "beauty-example-product-3",
+    "updated_at": "2025-11-30T19:46:31-08:00",
+    "published_at": null,
+    "template_suffix": null,
+    "published_scope": "web",
+    "tags": "Sample Product",
+    "status": "draft",
+    "admin_graphql_api_id": "gid://shopify/Product/9633385676965",
+    "variants": [
+      {
+        "id": 46475032002725,
+        "product_id": 9633385676965,
+        "title": "Default Title",
+        "price": "100.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": null,
+        "option1": "Default Title",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-30T18:32:33-08:00",
+        "updated_at": "2025-11-30T18:32:33-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 0,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": null,
+        "weight": 0,
+        "weight_unit": "lb",
+        "inventory_item_id": 48582870663333,
+        "inventory_quantity": 0,
+        "old_inventory_quantity": 0,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46475032002725",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12576628867237,
+        "product_id": 9633385676965,
+        "name": "Title",
+        "position": 1,
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43988730544293,
+        "alt": null,
+        "position": 1,
+        "product_id": 9633385676965,
+        "created_at": "2025-11-30T18:32:33-08:00",
+        "updated_at": "2025-11-30T18:32:33-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34562757820581",
+        "width": 2364,
+        "height": 2364,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/beauty-product-3.jpg?v=1764556353",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43988730544293,
+      "alt": null,
+      "position": 1,
+      "product_id": 9633385676965,
+      "created_at": "2025-11-30T18:32:33-08:00",
+      "updated_at": "2025-11-30T18:32:33-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34562757820581",
+      "width": 2364,
+      "height": 2364,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/beauty-product-3.jpg?v=1764556353",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9633386102949,
+    "title": "Example product",
+    "body_html": null,
+    "vendor": "Hexagon Store",
+    "product_type": "",
+    "created_at": "2025-11-30T18:32:34-08:00",
+    "handle": "beauty-example-product-4",
+    "updated_at": "2025-11-30T19:46:32-08:00",
+    "published_at": null,
+    "template_suffix": null,
+    "published_scope": "web",
+    "tags": "Sample Product",
+    "status": "draft",
+    "admin_graphql_api_id": "gid://shopify/Product/9633386102949",
+    "variants": [
+      {
+        "id": 46475032494245,
+        "product_id": 9633386102949,
+        "title": "Default Title",
+        "price": "100.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": null,
+        "option1": "Default Title",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-30T18:32:34-08:00",
+        "updated_at": "2025-11-30T18:32:34-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 0,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": null,
+        "weight": 0,
+        "weight_unit": "lb",
+        "inventory_item_id": 48582871122085,
+        "inventory_quantity": 0,
+        "old_inventory_quantity": 0,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46475032494245",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12576629293221,
+        "product_id": 9633386102949,
+        "name": "Title",
+        "position": 1,
+        "values": [
+          "Default Title"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43988732641445,
+        "alt": null,
+        "position": 1,
+        "product_id": 9633386102949,
+        "created_at": "2025-11-30T18:32:34-08:00",
+        "updated_at": "2025-11-30T18:32:34-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34562759688357",
+        "width": 2364,
+        "height": 2364,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/beauty-product-4.jpg?v=1764556354",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43988732641445,
+      "alt": null,
+      "position": 1,
+      "product_id": 9633386102949,
+      "created_at": "2025-11-30T18:32:34-08:00",
+      "updated_at": "2025-11-30T18:32:34-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34562759688357",
+      "width": 2364,
+      "height": 2364,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/beauty-product-4.jpg?v=1764556354",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9552984604837,
+    "title": "Glow On-The-Go Duo",
+    "body_html": "<p class=\"font-claude-response-body whitespace-normal break-words\">Never arrive dull again. The Glow On-The-Go Duo is a travel-ready set featuring TSA-approved sizes of our two most portable glow-getters: the Algae Refresh Mist (50ml) and Luminous Glow Serum (15ml).</p>\n<p class=\"font-claude-response-body whitespace-normal break-words\">This perfectly paired duo tackles the two biggest travel skin complaints—dehydration from recycled cabin air and exhaustion-induced dullness. The Algae Mist rehydrates and refreshes throughout your journey, while the Luminous Glow Serum delivers instant radiance the moment you land. Packaged in a reusable canvas pouch that fits perfectly in your personal item.</p>\n<p class=\"font-claude-response-body whitespace-normal break-words\"> </p>",
+    "vendor": "Hexagon Stores",
+    "product_type": "Virtual Kit",
+    "created_at": "2025-11-28T13:04:28-08:00",
+    "handle": "glow-on-the-go-duo",
+    "updated_at": "2025-12-01T08:00:24-08:00",
+    "published_at": "2025-11-28T13:04:28-08:00",
+    "template_suffix": null,
+    "published_scope": "global",
+    "tags": "bundle, bundles, christmas, codes for employee sale, cyber, ewg, Filter: Sets, gift, gift set, gift sets, giftsets, holiday, Holiday Gift Sets, holiday kit, holiday sets, Holiday25, pregnancy safe, Shop All Products, the holiday shop, tum, tumer, tumeric, tumeroc",
+    "status": "active",
+    "admin_graphql_api_id": "gid://shopify/Product/9552984604837",
+    "variants": [
+      {
+        "id": 46392291492005,
+        "product_id": 9552984604837,
+        "title": "One Size",
+        "price": "38.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "45.00",
+        "option1": "One Size",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:28-08:00",
+        "updated_at": "2025-11-28T13:04:28-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 180,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "GLOW-DUO-001",
+        "weight": 180,
+        "weight_unit": "g",
+        "inventory_item_id": 48500040171685,
+        "inventory_quantity": 45,
+        "old_inventory_quantity": 45,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392291492005",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495414821029,
+        "product_id": 9552984604837,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "One Size"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820399394981,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552984604837,
+        "created_at": "2025-11-28T13:04:28-08:00",
+        "updated_at": "2025-11-28T13:04:30-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396161933477",
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/Holiday25_Glow_Go_Box_Crop.jpg?v=1764363870",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820399394981,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552984604837,
+      "created_at": "2025-11-28T13:04:28-08:00",
+      "updated_at": "2025-11-28T13:04:30-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396161933477",
+      "width": 1200,
+      "height": 1200,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/Holiday25_Glow_Go_Box_Crop.jpg?v=1764363870",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9552985391269,
+    "title": "Luminous Glow Serum - 1ML Sample",
+    "body_html": "<p class=\"font-claude-response-body whitespace-normal break-words\">Some days you need results NOW. The Luminous Glow Serum is your instant-gratification product—a light-reflecting, skin-perfecting treatment that delivers immediate luminosity while also improving skin over time.</p>\n<p class=\"font-claude-response-body whitespace-normal break-words\">This dual-action formula combines micro-fine light-diffusing pearls for instant soft-focus radiance with Turmeric extract and Vitamin E for long-term brightening and repair. The golden-tinted formula adapts to all skin tones, creating a subtle, natural glow rather than glitter or shimmer. Wear alone for a \"no-makeup makeup\" look, mix with foundation for a dewy finish, or layer under makeup as a radiant primer.</p>",
+    "vendor": "Hexagon Stores",
+    "product_type": "Samples",
+    "created_at": "2025-11-28T13:04:31-08:00",
+    "handle": "luminous-glow-serum-1ml-sample",
+    "updated_at": "2025-12-01T07:59:28-08:00",
+    "published_at": "2025-11-28T13:04:31-08:00",
+    "template_suffix": null,
+    "published_scope": "global",
+    "tags": "ewg, hidden, KORA_FREEGIFT",
+    "status": "active",
+    "admin_graphql_api_id": "gid://shopify/Product/9552985391269",
+    "variants": [
+      {
+        "id": 46392292343973,
+        "product_id": 9552985391269,
+        "title": "One Size",
+        "price": "0.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "5.00",
+        "option1": "One Size",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:31-08:00",
+        "updated_at": "2025-11-28T13:04:31-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 15,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "SAMPLE-GLOW-001",
+        "weight": 15,
+        "weight_unit": "g",
+        "inventory_item_id": 48500041023653,
+        "inventory_quantity": 100,
+        "old_inventory_quantity": 100,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392292343973",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495415640229,
+        "product_id": 9552985391269,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "One Size"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820402507941,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552985391269,
+        "created_at": "2025-11-28T13:04:31-08:00",
+        "updated_at": "2025-11-28T13:04:32-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396165079205",
+        "width": 2000,
+        "height": 2000,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/TGSSample.jpg?v=1764363873",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820402507941,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552985391269,
+      "created_at": "2025-11-28T13:04:31-08:00",
+      "updated_at": "2025-11-28T13:04:32-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396165079205",
+      "width": 2000,
+      "height": 2000,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/TGSSample.jpg?v=1764363873",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9552986341541,
+    "title": "Mushroom Hydrating Mask - 5ML Sample",
+    "body_html": "<p class=\"font-claude-response-body whitespace-normal break-words\">Your skin works overtime battling stress, pollution, and lack of sleep. Our Mushroom Hydrating Mask is a weekly rescue treatment that uses the power of adaptogenic fungi to help skin recover, repair, and rebalance.</p>\n<p class=\"font-claude-response-body whitespace-normal break-words\">This rich, creamy mask features a proprietary blend of five functional mushrooms: Tremella (holds 500x its weight in water), Reishi (calms inflammation and redness), Chaga (powerful antioxidant protection), Shiitake (brightens and evens tone), and Cordyceps (boosts cellular energy and oxygen flow). Unlike sheet masks that sit on the surface, this wash-off formula penetrates deeply over 15-20 minutes for transformative results.</p>",
+    "vendor": "Hexagon Stores",
+    "product_type": "Samples",
+    "created_at": "2025-11-28T13:04:35-08:00",
+    "handle": "mushroom-hydrating-mask-5ml-sample",
+    "updated_at": "2025-12-01T07:57:20-08:00",
+    "published_at": "2025-11-28T13:04:35-08:00",
+    "template_suffix": null,
+    "published_scope": "global",
+    "tags": "ewg, hidden, KORA_FREEGIFT",
+    "status": "active",
+    "admin_graphql_api_id": "gid://shopify/Product/9552986341541",
+    "variants": [
+      {
+        "id": 46392293327013,
+        "product_id": 9552986341541,
+        "title": "One Size",
+        "price": "0.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "8.00",
+        "option1": "One Size",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:35-08:00",
+        "updated_at": "2025-11-28T13:04:35-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 20,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "SAMPLE-MASK-001",
+        "weight": 20,
+        "weight_unit": "g",
+        "inventory_item_id": 48500042006693,
+        "inventory_quantity": 75,
+        "old_inventory_quantity": 75,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392293327013",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495416656037,
+        "product_id": 9552986341541,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "One Size"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820406505637,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552986341541,
+        "created_at": "2025-11-28T13:04:35-08:00",
+        "updated_at": "2025-11-28T13:04:37-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396168847525",
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/MilkyMushroom_HydratingMask_5ml_Sachet_White_Crop.jpg?v=1764363877",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820406505637,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552986341541,
+      "created_at": "2025-11-28T13:04:35-08:00",
+      "updated_at": "2025-11-28T13:04:37-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396168847525",
+      "width": 1200,
+      "height": 1200,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/MilkyMushroom_HydratingMask_5ml_Sachet_White_Crop.jpg?v=1764363877",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9552983982245,
+    "title": "Radiant Glow Trio",
+    "body_html": "<p class=\"font-claude-response-body whitespace-normal break-words\">This is the set for serious glow-seekers. The Radiant Glow Trio combines our most potent brightening and luminosity products into one comprehensive collection designed to transform dull, lackluster skin into a radiant, healthy-looking complexion.</p>\n<p class=\"font-claude-response-body whitespace-normal break-words\">Unlike the Essential Favorites Trio (which covers the basics), this set is specifically curated for those whose primary concern is dullness, uneven tone, or skin that's lost its natural vibrancy. Whether the cause is stress, lack of sleep, aging, or environmental damage, this trio works on multiple levels to restore your glow.</p>",
+    "vendor": "Hexagon Stores",
+    "product_type": "Virtual Kit",
+    "created_at": "2025-11-28T13:04:25-08:00",
+    "handle": "radiant-glow-trio",
+    "updated_at": "2025-12-01T08:00:29-08:00",
+    "published_at": "2025-11-28T13:04:25-08:00",
+    "template_suffix": null,
+    "published_scope": "global",
+    "tags": "bundle, bundles, christmas, codes for employee sale, cyber, ewg, Filter: Sets, Filter: Turmeric: Glow + Tone, gift, gift set, gift sets, giftsets, holiday, Holiday Gift Sets, holiday kit, holiday sets, Holiday25, Moisturisers, pregnancy safe, Shop All Products, the holiday shop, tum, tumer, tumeric, tumeroc",
+    "status": "active",
+    "admin_graphql_api_id": "gid://shopify/Product/9552983982245",
+    "variants": [
+      {
+        "id": 46392290836645,
+        "product_id": 9552983982245,
+        "title": "One Size",
+        "price": "80.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "95.00",
+        "option1": "One Size",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:25-08:00",
+        "updated_at": "2025-11-28T13:04:25-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 250,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "GLOW-TRIO-001",
+        "weight": 250,
+        "weight_unit": "g",
+        "inventory_item_id": 48500039483557,
+        "inventory_quantity": 25,
+        "old_inventory_quantity": 25,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392290836645",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495414198437,
+        "product_id": 9552983982245,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "One Size"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820396773541,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552983982245,
+        "created_at": "2025-11-28T13:04:25-08:00",
+        "updated_at": "2025-11-28T13:04:27-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396159246501",
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/Holiday25_TurmericGlowTrio_Box_Crop.jpg?v=1764363867",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820396773541,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552983982245,
+      "created_at": "2025-11-28T13:04:25-08:00",
+      "updated_at": "2025-11-28T13:04:27-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396159246501",
+      "width": 1200,
+      "height": 1200,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/Holiday25_TurmericGlowTrio_Box_Crop.jpg?v=1764363867",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9552985948325,
+    "title": "Radiant Tone Niacinamide Serum",
+    "body_html": "<p class=\"font-claude-response-body whitespace-normal break-words\">Enlarged pores, excess oil, and bumpy texture don't stand a chance against our Radiant Tone Niacinamide Serum. Featuring a clinical-strength 12% Niacinamide (Vitamin B3) concentration, this silky serum regulates sebum production, minimizes the appearance of pores, and strengthens the skin barrier—all without irritation.</p>\n<p class=\"font-claude-response-body whitespace-normal break-words\">Unlike harsh pore-minimizing products that strip and dry, Niacinamide works with your skin's natural processes. Added Zinc PCA controls oil at the source, while Centella Asiatica (Cica) calms any existing inflammation or breakouts. The result? Smoother, more refined skin that looks airbrushed without any filter.</p>",
+    "vendor": "Hexagon Stores",
+    "product_type": "Treatments",
+    "created_at": "2025-11-28T13:04:33-08:00",
+    "handle": "radiant-tone-niacinamide-serum",
+    "updated_at": "2025-12-01T07:57:34-08:00",
+    "published_at": "2025-11-28T13:04:33-08:00",
+    "template_suffix": null,
+    "published_scope": "global",
+    "tags": "__label:NEW, Blackheads, codes for employee sale, Cortina, cyber, Dryness, Dullness & Uneven Texture, ewg, Filter: Congested + Blemish-Prone, Filter: Dryness, Filter: Dullness + Uneven Texture, Filter: Full Size, Filter: Lines + Wrinkles, Filter: New, Filter: Oily Skin + Pores, Filter: Serums + Treatments, Filter: Travel Size, Filter: Turmeric: Glow + Tone, Filter: Uneven Tone + Dark Spots, Large pores, Minimized pores, NBCU, neck, Niacinamide, Oily Skin & Pores, Pore minimization, sensitive, sensitive skin, Shop All Products, Skin barrier, sub, subs, subsc, tgd, the holiday shop, travel size, trial, Uneven Tone & Dark Spots, vegan",
+    "status": "active",
+    "admin_graphql_api_id": "gid://shopify/Product/9552985948325",
+    "variants": [
+      {
+        "id": 46392292901029,
+        "product_id": 9552985948325,
+        "title": "15ml",
+        "price": "31.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "40.00",
+        "option1": "15ml",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:34-08:00",
+        "updated_at": "2025-11-28T13:04:34-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 80,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "RAD-TONE-SERUM-001",
+        "weight": 80,
+        "weight_unit": "g",
+        "inventory_item_id": 48500041580709,
+        "inventory_quantity": 30,
+        "old_inventory_quantity": 30,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392292901029",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495416262821,
+        "product_id": 9552985948325,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "15ml"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820405096613,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552985948325,
+        "created_at": "2025-11-28T13:04:34-08:00",
+        "updated_at": "2025-11-28T13:04:36-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396167438501",
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/TurmericGlow_Drops_30ml_Bottle_Crop.jpg?v=1764363876",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820405096613,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552985948325,
+      "created_at": "2025-11-28T13:04:34-08:00",
+      "updated_at": "2025-11-28T13:04:36-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396167438501",
+      "width": 1200,
+      "height": 1200,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/TurmericGlow_Drops_30ml_Bottle_Crop.jpg?v=1764363876",
+      "variant_ids": []
+    }
+  },
+  {
+    "id": 9552986996901,
+    "title": "Vitamin C Brightening Serum - 1ML Sample",
+    "body_html": "<div>\n<div class=\"grid-cols-1 grid gap-2.5 [&amp;_&gt;_*]:min-w-0\">\n<p class=\"font-claude-response-body whitespace-normal break-words\">Wake up dull, tired skin with our potent Vitamin C Brightening Serum. This lightweight, water-based formula features a 20% concentration of stabilized L-Ascorbic Acid—the most bioavailable form of Vitamin C—combined with Kakadu Plum extract, which contains 100x more Vitamin C than oranges.</p>\n</div>\n</div>\n<div>\n<div class=\"grid-cols-1 grid gap-2.5 [&amp;_&gt;_*]:min-w-0\">\n<p class=\"font-claude-response-body whitespace-normal break-words\">Designed for morning use, this serum creates an invisible shield against environmental aggressors like pollution and UV damage while actively fading existing dark spots and post-acne marks. The addition of Ferulic Acid boosts Vitamin C's stability and doubles its photoprotection benefits.</p>\n</div>\n</div>",
+    "vendor": "Hexagon Stores",
+    "product_type": "Samples",
+    "created_at": "2025-11-28T13:04:38-08:00",
+    "handle": "vitamin-c-brightening-serum-1ml-sample",
+    "updated_at": "2025-12-01T07:49:54-08:00",
+    "published_at": null,
+    "template_suffix": null,
+    "published_scope": "global",
+    "tags": "ewg, hidden, KORA_FREEGIFT",
+    "status": "active",
+    "admin_graphql_api_id": "gid://shopify/Product/9552986996901",
+    "variants": [
+      {
+        "id": 46392293982373,
+        "product_id": 9552986996901,
+        "title": "One Size",
+        "price": "0.00",
+        "position": 1,
+        "inventory_policy": "deny",
+        "compare_at_price": "5.00",
+        "option1": "One Size",
+        "option2": null,
+        "option3": null,
+        "created_at": "2025-11-28T13:04:38-08:00",
+        "updated_at": "2025-11-28T13:04:38-08:00",
+        "taxable": true,
+        "barcode": null,
+        "fulfillment_service": "manual",
+        "grams": 15,
+        "inventory_management": "shopify",
+        "requires_shipping": true,
+        "sku": "SAMPLE-VITC-001",
+        "weight": 15,
+        "weight_unit": "g",
+        "inventory_item_id": 48500042662053,
+        "inventory_quantity": 60,
+        "old_inventory_quantity": 60,
+        "admin_graphql_api_id": "gid://shopify/ProductVariant/46392293982373",
+        "image_id": null
+      }
+    ],
+    "options": [
+      {
+        "id": 12495417311397,
+        "product_id": 9552986996901,
+        "name": "Size",
+        "position": 1,
+        "values": [
+          "One Size"
+        ]
+      }
+    ],
+    "images": [
+      {
+        "id": 43820408668325,
+        "alt": null,
+        "position": 1,
+        "product_id": 9552986996901,
+        "created_at": "2025-11-28T13:04:38-08:00",
+        "updated_at": "2025-11-28T13:04:39-08:00",
+        "admin_graphql_api_id": "gid://shopify/MediaImage/34396170813605",
+        "width": 1200,
+        "height": 1200,
+        "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/KakaduPlum_VitaminCSerum_1mL_Sachet_White_Crop.jpg?v=1764363880",
+        "variant_ids": []
+      }
+    ],
+    "image": {
+      "id": 43820408668325,
+      "alt": null,
+      "position": 1,
+      "product_id": 9552986996901,
+      "created_at": "2025-11-28T13:04:38-08:00",
+      "updated_at": "2025-11-28T13:04:39-08:00",
+      "admin_graphql_api_id": "gid://shopify/MediaImage/34396170813605",
+      "width": 1200,
+      "height": 1200,
+      "src": "https://cdn.shopify.com/s/files/1/0741/3412/6757/files/KakaduPlum_VitaminCSerum_1mL_Sachet_White_Crop.jpg?v=1764363880",
+      "variant_ids": []
+    }
+  }
+]

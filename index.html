@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Hexagon Agentic Commerce Demo</title>
+	<script src="https://js.stripe.com/v3/"></script>
+	<style>
+		body {
+			font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+			background-color: #f7f7f7;
+			margin: 0;
+			padding: 24px;
+			color: #111;
+		}
+		.container {
+			max-width: 640px;
+			margin: 0 auto;
+			background: #fff;
+			border-radius: 12px;
+			padding: 24px;
+			box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+		}
+		h1 {
+			margin-top: 0;
+		}
+		form {
+			display: flex;
+			gap: 12px;
+			margin-bottom: 20px;
+		}
+		input[type="text"] {
+			flex: 1;
+			padding: 12px;
+			border-radius: 8px;
+			border: 1px solid #ccc;
+			font-size: 16px;
+		}
+		button {
+			background: #111;
+			color: #fff;
+			border: none;
+			padding: 12px 20px;
+			border-radius: 8px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+		button:disabled {
+			background: #ccc;
+			cursor: not-allowed;
+		}
+		.card {
+			border: 1px solid #ececec;
+			border-radius: 10px;
+			padding: 16px;
+			display: none;
+			margin-bottom: 20px;
+		}
+		.card img {
+			width: 100%;
+			border-radius: 8px;
+			margin-bottom: 12px;
+		}
+		#status {
+			min-height: 24px;
+			color: #333;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Agent → Stripe Demo</h1>
+		<form id="query-form">
+			<input id="query-input" type="text" placeholder="Ask for a product (e.g. hydrating mist)" required />
+			<button type="submit">Send</button>
+		</form>
+
+		<div id="product-card" class="card">
+			<img id="product-image" src="" alt="" />
+			<h2 id="product-title"></h2>
+			<p id="product-description"></p>
+			<p><strong id="product-price"></strong></p>
+		</div>
+
+		<div id="card-element" style="margin-bottom: 12px;"></div>
+		<button id="pay-button" disabled>Pay $1</button>
+		<p id="status"></p>
+	</div>
+
+	<script>
+		const form = document.getElementById('query-form');
+		const queryInput = document.getElementById('query-input');
+		const productCard = document.getElementById('product-card');
+		const productImage = document.getElementById('product-image');
+		const productTitle = document.getElementById('product-title');
+		const productDescription = document.getElementById('product-description');
+		const productPrice = document.getElementById('product-price');
+		const statusEl = document.getElementById('status');
+		const payButton = document.getElementById('pay-button');
+
+		let stripe;
+		let elements;
+		let cardElement;
+		let currentClientSecret = null;
+		let stripeUnavailable = false;
+
+		async function initStripe() {
+			if (stripe || stripeUnavailable) return;
+
+			const response = await fetch('/config');
+			const data = await response.json();
+			if (!response.ok) {
+				throw new Error(data.error || 'Unable to load Stripe config');
+			}
+
+			if (!data.publishableKey) {
+				stripeUnavailable = true;
+				setStatus('Stripe key missing. Payments are disabled until keys are configured.');
+				payButton.textContent = 'Stripe key required';
+				payButton.disabled = true;
+				return;
+			}
+
+			stripe = Stripe(data.publishableKey);
+			elements = stripe.elements();
+			cardElement = elements.create('card');
+			cardElement.mount('#card-element');
+		}
+
+		function renderProductCard(product) {
+			productImage.src = product.image;
+			productImage.alt = product.title;
+			productTitle.textContent = product.title;
+			productDescription.textContent = product.description;
+			productPrice.textContent = product.price_display;
+			productCard.style.display = 'block';
+		}
+
+		function setStatus(message, isError = false) {
+			statusEl.textContent = message;
+			statusEl.style.color = isError ? '#c0392b' : '#333';
+		}
+
+		form.addEventListener('submit', async (event) => {
+			event.preventDefault();
+			setStatus('Contacting agent...');
+			payButton.disabled = true;
+
+			try {
+				await initStripe();
+
+				// Agent selects a product, decides on $1 charge, and creates a PaymentIntent.
+				const response = await fetch('/agent', {
+					method: 'POST',
+					headers: { 'Content-Type': 'application/json' },
+					body: JSON.stringify({ query: queryInput.value.trim() })
+				});
+
+				const data = await response.json();
+
+				if (!response.ok) {
+					throw new Error(data.error || 'Agent failed');
+				}
+
+				renderProductCard(data.product);
+				currentClientSecret = data.payment_intent_client_secret;
+				if (stripeUnavailable) {
+					setStatus('Product selected. Stripe key missing, so payment is currently disabled.');
+					payButton.disabled = true;
+				} else {
+					setStatus('Product selected. Enter card details to buy for $1.');
+					payButton.disabled = false;
+					payButton.textContent = 'Pay $1';
+				}
+			} catch (error) {
+				setStatus(error.message, true);
+			}
+		});
+
+		payButton.addEventListener('click', async () => {
+			if (stripeUnavailable) {
+				setStatus('Stripe key missing. Configure STRIPE_SECRET_KEY and STRIPE_PUBLISHABLE_KEY to accept payments.', true);
+				return;
+			}
+
+			if (!stripe || !currentClientSecret) {
+				return;
+			}
+
+			setStatus('Processing payment...');
+			payButton.disabled = true;
+
+			// Stripe Elements completes the $1 PaymentIntent created by the agent.
+			const { error, paymentIntent } = await stripe.confirmCardPayment(currentClientSecret, {
+				payment_method: {
+					card: cardElement
+				}
+			});
+
+			if (error) {
+				setStatus(error.message, true);
+				payButton.disabled = false;
+				return;
+			}
+
+			setStatus(`Payment ${paymentIntent.status}. Thank you!`);
+		});
+	</script>
+</body>
+</html>
