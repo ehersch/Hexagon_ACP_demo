@@ -4,7 +4,8 @@ import path from 'path';
 import process from 'process';
 import Stripe from 'stripe';
 import { fileURLToPath } from 'url';
-import { startProductRefreshCron } from './product_refresh.js';
+import crypto from 'crypto';
+import cron from 'node-cron';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -13,18 +14,54 @@ const productsFilePath = path.join(__dirname, 'products.json');
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY ?? '';
 const stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY ?? '';
 const stripeConfigured = Boolean(stripeSecretKey);
+const shopifyStoreDomain = process.env.SHOPIFY_STORE_DOMAIN ?? ''; // e.g. hexagon-store-3.myshopify.com
+const shopifyAccessToken = process.env.SHOPIFY_ACCESS_TOKEN ?? '';
+const shopifyWebhookSecret = process.env.SHOPIFY_WEBHOOK_SECRET ?? '';
+const shopifyApiVersion = process.env.SHOPIFY_API_VERSION ?? '2024-01';
 
 if (!stripeConfigured) {
 	console.warn('STRIPE_SECRET_KEY is not set. PaymentIntents will be mocked.');
+}
+
+if (!shopifyStoreDomain || !shopifyAccessToken) {
+	console.warn('Shopify credentials missing. Initial product sync will fail until SHOPIFY_STORE_DOMAIN and SHOPIFY_ACCESS_TOKEN are provided.');
 }
 
 const stripe = stripeConfigured ? new Stripe(stripeSecretKey, { apiVersion: '2024-06-20' }) : null;
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+let productsCache = [];
+
+app.use(express.static(__dirname));
+
+const shopifyWebhookMiddleware = express.raw({ type: 'application/json' });
+
+app.post('/webhooks/shopify/products', shopifyWebhookMiddleware, async (req, res) => {
+	if (!shopifyWebhookSecret) {
+		console.warn('SHOPIFY_WEBHOOK_SECRET missing. Unable to verify webhook.');
+		return res.status(500).end();
+	}
+
+	const hmacHeader = req.get('X-Shopify-Hmac-Sha256') ?? '';
+	const digest = crypto.createHmac('sha256', shopifyWebhookSecret).update(req.body).digest('base64');
+	const headerBuffer = Buffer.from(hmacHeader, 'base64');
+	const digestBuffer = Buffer.from(digest, 'base64');
+
+	if (headerBuffer.length !== digestBuffer.length || !crypto.timingSafeEqual(digestBuffer, headerBuffer)) {
+		return res.status(401).send('Invalid HMAC');
+	}
+
+	try {
+		await refreshProductsFromShopify('webhook');
+		res.status(200).send('ok');
+	} catch (error) {
+		console.error('Failed to refresh products from webhook:', error);
+		res.status(500).send('refresh failed');
+	}
+});
 
 app.use(express.json());
-app.use(express.static(__dirname));
 
 app.get('/config', (_req, res) => {
 	res.json({
@@ -69,11 +106,18 @@ app.listen(PORT, () => {
 	console.log(`Agent demo listening on port ${PORT}`);
 });
 
-startProductRefreshCron();
-
 async function loadProducts() {
-	const raw = await fs.readFile(productsFilePath, 'utf-8');
-	const products = JSON.parse(raw);
+	if (!productsCache.length) {
+		try {
+			const raw = await fs.readFile(productsFilePath, 'utf-8');
+			productsCache = JSON.parse(raw);
+		} catch (error) {
+			console.warn('Failed to read products from disk, attempting Shopify fetch...', error);
+			await refreshProductsFromShopify('lazy-load');
+		}
+	}
+
+	const products = productsCache;
 
 	return products
 		.filter((product) => product?.status !== 'draft')
@@ -189,3 +233,35 @@ function formatPrice(amount) {
 
 	return `$${amount.toFixed(2)}`;
 }
+
+async function refreshProductsFromShopify(reason = 'manual') {
+	if (!shopifyStoreDomain || !shopifyAccessToken) {
+		throw new Error('Missing Shopify credentials');
+	}
+
+	console.log(`[${new Date().toISOString()}] Refreshing products via Shopify (${reason})`);
+	const response = await fetch(`https://${shopifyStoreDomain}/admin/api/${shopifyApiVersion}/products.json`, {
+		headers: {
+			'X-Shopify-Access-Token': shopifyAccessToken,
+			'Content-Type': 'application/json'
+		}
+	});
+
+	if (!response.ok) {
+		throw new Error(`Shopify API responded with ${response.status}`);
+	}
+
+	const data = await response.json();
+	productsCache = data.products ?? [];
+	await fs.writeFile(productsFilePath, JSON.stringify(productsCache, null, 2));
+}
+
+refreshProductsFromShopify('startup').catch((error) => {
+	console.error('Initial Shopify sync failed:', error);
+});
+
+cron.schedule('* * * * *', () => {
+	refreshProductsFromShopify('cron-1m').catch((error) => {
+		console.error('Scheduled Shopify sync failed:', error);
+	});
+});
