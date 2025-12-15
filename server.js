@@ -12,7 +12,6 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const baseProductsFilePath = path.join(__dirname, 'products.json');
-const externalRawProductsFilePath = path.join(__dirname, 'mcp_catalog_raw.json');
 const externalProductsFilePath = path.join(__dirname, 'external_products.json');
 const stripeSecretKey = process.env.STRIPE_SECRET_KEY ?? '';
 const stripePublishableKey = process.env.STRIPE_PUBLISHABLE_KEY ?? '';
@@ -21,9 +20,12 @@ const shopifyStoreDomain = process.env.SHOPIFY_STORE_DOMAIN ?? ''; // e.g. hexag
 const shopifyAccessToken = process.env.SHOPIFY_ACCESS_TOKEN ?? '';
 const shopifyWebhookSecret = process.env.SHOPIFY_WEBHOOK_SECRET ?? '';
 const shopifyApiVersion = process.env.SHOPIFY_API_VERSION ?? '2024-01';
-const mcpStoreDomain = process.env.MCP_STORE ?? '';
+const mcpStores = (process.env.MCP_STORES ?? '')
+	.split(',')
+	.map((store) => store.trim())
+	.filter(Boolean);
 const mcpMaxProducts = process.env.MCP_MAX_PRODUCTS ?? '';
-const useMcpScraper = Boolean(mcpStoreDomain);
+const useMcpScraper = mcpStores.length > 0;
 const mcpScriptPath = path.join(__dirname, 'download_catalog_template.py');
 
 if (!stripeConfigured) {
@@ -286,39 +288,32 @@ async function refreshExternalProducts(reason = 'manual') {
 		return;
 	}
 
-	await runMcpScraper(reason);
+	const aggregated = [];
+	let successCount = 0;
+	let lastError = null;
+
+	for (const store of mcpStores) {
+		try {
+			const storeProducts = await runMcpScraperForStore(store, reason);
+			aggregated.push(...storeProducts);
+			successCount += 1;
+		} catch (error) {
+			lastError = error;
+			console.error(`MCP refresh failed for ${store}:`, error);
+		}
+	}
+
+	if (!successCount) {
+		throw lastError ?? new Error('All MCP store refreshes failed');
+	}
+
+	externalProductsCache = aggregated;
+	await fs.writeFile(externalProductsFilePath, JSON.stringify(externalProductsCache, null, 2));
 }
 
-async function runMcpScraper(reason = 'manual') {
-	if (!mcpStoreDomain) {
-		throw new Error('MCP_STORE is not configured');
-	}
-
-	console.log(`[${new Date().toISOString()}] Refreshing products via MCP (${reason})`);
-	const args = [mcpScriptPath, '--store', mcpStoreDomain, '--output', externalRawProductsFilePath];
-
-	if (mcpMaxProducts) {
-		args.push('--max-products', mcpMaxProducts);
-	}
-
-	return new Promise((resolve, reject) => {
-		const child = spawn('python3', args, { cwd: __dirname, stdio: 'inherit' });
-		child.on('exit', (code) => {
-			if (code !== 0) {
-				reject(new Error(`MCP scraper exited with code ${code}`));
-				return;
-			}
-
-			readJsonFile(externalRawProductsFilePath)
-				.then((rawProducts) => rawProducts.map(transformMcpProduct))
-				.then(async (transformed) => {
-					externalProductsCache = transformed;
-					await fs.writeFile(externalProductsFilePath, JSON.stringify(transformed, null, 2));
-					resolve();
-				})
-				.catch(reject);
-		});
-	});
+function getRawFilePathForStore(storeDomain) {
+	const sanitized = sanitizeStoreDomain(storeDomain);
+	return path.join(__dirname, `mcp_catalog_raw_${sanitized}.json`);
 }
 
 async function readJsonFile(filePath) {
@@ -326,11 +321,41 @@ async function readJsonFile(filePath) {
 	return JSON.parse(raw);
 }
 
-function transformMcpProduct(product, index) {
-	const productId = extractNumericId(product.product_id) ?? `mcp_${index}`;
+async function runMcpScraperForStore(storeDomain, reason = 'manual') {
+	if (!storeDomain) {
+		throw new Error('Missing store domain for MCP scraper');
+	}
+
+	const rawFilePath = getRawFilePathForStore(storeDomain);
+
+	console.log(`[${new Date().toISOString()}] Refreshing products via MCP (${reason}) [${storeDomain}]`);
+	const args = [mcpScriptPath, '--store', storeDomain, '--output', rawFilePath];
+
+	if (mcpMaxProducts) {
+		args.push('--max-products', mcpMaxProducts);
+	}
+
+	await new Promise((resolve, reject) => {
+		const child = spawn('python3', args, { cwd: __dirname, stdio: 'inherit' });
+		child.on('exit', (code) => {
+			if (code !== 0) {
+				reject(new Error(`MCP scraper exited with code ${code}`));
+			} else {
+				resolve();
+			}
+		});
+	});
+
+	const rawProducts = await readJsonFile(rawFilePath);
+	return rawProducts.map((product, index) => transformMcpProduct(product, index, storeDomain));
+}
+
+function transformMcpProduct(product, index, storeDomain) {
+	const storeKey = sanitizeStoreDomain(storeDomain);
+	const productId = extractNumericId(product.product_id) ?? `mcp_${storeKey}_${index}`;
 	const variants = Array.isArray(product.variants)
 		? product.variants.map((variant, variantIndex) => ({
-				id: extractNumericId(variant.variant_id) ?? `mcp_var_${index}_${variantIndex}`,
+				id: extractNumericId(variant.variant_id) ?? `mcp_var_${storeKey}_${index}_${variantIndex}`,
 				product_id: productId,
 				title: variant.title ?? 'Default',
 				price: String(variant.price ?? product.price_range?.min ?? '0.00'),
@@ -342,7 +367,7 @@ function transformMcpProduct(product, index) {
 		  }))
 		: [
 				{
-					id: `mcp_var_${index}_0`,
+					id: `mcp_var_${storeKey}_${index}_0`,
 					product_id: productId,
 					title: 'Default',
 					price: String(product.price_range?.min ?? '0.00'),
@@ -360,7 +385,7 @@ function transformMcpProduct(product, index) {
 		id: productId,
 		title: product.title ?? 'Untitled',
 		body_html: product.description ? `<p>${product.description}</p>` : '',
-		vendor: product.vendor ?? getMcpVendor(),
+		vendor: product.vendor ?? getMcpVendor(storeDomain),
 		product_type: product.product_type ?? '',
 		status: variants.some((variant) => variant.available) ? 'active' : 'draft',
 		tags: Array.isArray(product.tags) ? product.tags.join(', ') : product.tags ?? '',
@@ -404,15 +429,17 @@ function extractNumericId(gid = '') {
 	return Number.isFinite(numeric) ? numeric : null;
 }
 
-function getMcpVendor() {
-	if (!mcpStoreDomain) {
-		return 'External Store';
-	}
+function sanitizeStoreDomain(store) {
+	return store ? store.replace(/[^a-z0-9]/gi, '_') : 'external';
+}
+
+function getMcpVendor(storeDomain) {
+	const domain = storeDomain || 'external-store.example.com';
 
 	try {
-		return new URL(`https://${mcpStoreDomain}`).hostname;
+		return new URL(`https://${domain}`).hostname;
 	} catch (_error) {
-		return 'External Store';
+		return domain;
 	}
 }
 
