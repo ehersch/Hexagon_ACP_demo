@@ -725,8 +725,7 @@
       "Loyalty:GiftType:Regular",
       "Loyalty:RequiresAccount:False",
       "Loyalty:Status:Active",
-      "Loyalty:Threshold:300",
-      "Loyalty:Threshold:USD:300:inUSD:300",
+      "Loyalty:Threshold:250",
       "Loyalty:Tier:AllTiers",
       "Maintenance:GWP",
       "Policy:CannotShipOutsideUS",
@@ -1065,7 +1064,6 @@
       "Color:Bright Red Leather:Color",
       "ColorGroup:Red",
       "ColorwayType:Limited",
-      "Computed:IsAlmostGone",
       "Content:Builder",
       "Disable:SoldOutMessaging",
       "FA25BagCollection-family",
@@ -1897,54 +1895,6 @@
     ]
   },
   {
-    "product_id": "gid://shopify/Product/9092853006695",
-    "title": "Everyday Beanie - Bone",
-    "description": "Complete your cozy look with the relaxed Everyday Beanie. It\u2019s made with a soft wool blend and wears well with everything from sherpa and leggings to a his-hers sweatshirt and joggers.",
-    "url": "https://www.aloyoga.com/products/a0242u-everyday-beanie-bone-mens",
-    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0242U_03040_b1_s1_a3.jpg?v=1762289149",
-    "price_range": {
-      "min": "78.0",
-      "max": "78.0",
-      "currency": "USD"
-    },
-    "product_type": "Men:Accessories:Cold Weather:Beanies",
-    "tags": [
-      "AccessoriesMensPDP",
-      "BVCategory:Accessories",
-      "Color:Bone:Color",
-      "ColorGroup:Beige",
-      "Computed:IsAlmostGone",
-      "FA25D5-family",
-      "FA25Drops-family",
-      "Maintenance:ColorwayProduct",
-      "Maintenance:DontPublishToPOS",
-      "master-accessories-all",
-      "master-accessories-men",
-      "master-man-all",
-      "Men:Fashion",
-      "not_clearance",
-      "pricing:fullprice",
-      "Status:FPPhaseOut",
-      "Status:PhaseOut",
-      "StyleId:MensA0242U",
-      "SuppressModelInfo",
-      "Unisex:DuplicateSKU",
-      "X:IsPublishedToOnlineStore",
-      "YCRF_reviews:accessories",
-      "YGroup_MensA0242U"
-    ],
-    "variants": [
-      {
-        "variant_id": "gid://shopify/ProductVariant/50661868863847",
-        "title": "Bone / One Size",
-        "price": "78.0",
-        "currency": "USD",
-        "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0242U_03040_b1_s1_a1.jpg?v=1762289149",
-        "available": true
-      }
-    ]
-  },
-  {
     "product_id": "gid://shopify/Product/9092852973927",
     "title": "Notable Beanie - Athletic Heather Grey",
     "description": "Sometimes a good beanie is your best hair day. Especially if you have this one in your collection\u2014the ribbed fabric is warm and cozy, and the Alo logo is unmistakably cool. Wear it to finish off all your favorite street and lounge looks.",
@@ -2726,7 +2676,6 @@
       "ColorwayType:Limited",
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:M",
-      "Computed:UnderInventoryThreshold:5:for:S",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:5:L - XL",
@@ -3308,7 +3257,6 @@
       "ColorwayType:Limited",
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:M",
-      "Computed:UnderInventoryThreshold:5:for:S",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:5:L - XL",
@@ -3618,11 +3566,12 @@
       "Color:Navy:Color",
       "ColorGroup:Blue",
       "Computed:IsAlmostGone",
-      "Computed:UnderInventoryThreshold:5:for:M",
+      "Computed:UnderInventoryThreshold:5:for:L",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
+      "Filter:Size:2XL",
       "Filter:Size:L",
       "Filter:Size:M",
       "Filter:Size:S",
@@ -3632,7 +3581,6 @@
       "Maintenance:ColorwayProduct",
       "master-woman-all",
       "not_clearance",
-      "Preorder",
       "pricing:fullprice",
       "Status:Seasonal",
       "StyleId:U3056R",
@@ -3699,7 +3647,7 @@
         "price": "388.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U3056R_03842_b1_s1_a2_m161.jpg?v=1762937781",
-        "available": false
+        "available": true
       }
     ]
   },
@@ -3729,8 +3677,6 @@
       "Content:Builder",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
-      "Filter:DisplaySize:4:Medium",
-      "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XS",
       "Filter:Size:XXS",
@@ -3828,7 +3774,6 @@
       "BVCategory:Men",
       "Color:Espresso Pinstripe:Color",
       "ColorGroup:Brown",
-      "Computed:UnderInventoryThreshold:5:for:L",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
@@ -4036,11 +3981,12 @@
       "Color:Navy:Color",
       "ColorGroup:Blue",
       "Computed:IsAlmostGone",
-      "Computed:UnderInventoryThreshold:5:for:M",
+      "Computed:UnderInventoryThreshold:5:for:L",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
+      "Filter:Size:2XL",
       "Filter:Size:L",
       "Filter:Size:M",
       "Filter:Size:S",
@@ -4053,7 +3999,6 @@
       "Men:Activity:Lounge",
       "Men:Fashion",
       "not_clearance",
-      "Preorder",
       "pricing:fullprice",
       "Status:Seasonal",
       "StyleId:MensU3056R",
@@ -4119,7 +4064,7 @@
         "price": "388.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U3056R_03842_b1_s1_a2_m214.jpg?v=1763007708",
-        "available": false
+        "available": true
       }
     ]
   },
@@ -4350,8 +4295,6 @@
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:S",
       "Filter:DisplaySize:4:Medium",
-      "Filter:DisplaySize:6:XL - 2XL",
-      "Filter:Size:2XL",
       "Filter:Size:M",
       "JustDropped:New This Season",
       "Maintenance:ColorwayProduct",
@@ -4409,7 +4352,7 @@
         "price": "118.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M3210R_06659_b1_s1_a4_m261.jpg?v=1763486133",
-        "available": true
+        "available": false
       }
     ]
   },
@@ -4429,7 +4372,6 @@
       "BVCategory:Women",
       "Color:Espresso Pinstripe:Color",
       "ColorGroup:Brown",
-      "Computed:UnderInventoryThreshold:5:for:L",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
@@ -4536,6 +4478,7 @@
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
+      "Filter:Size:2XL",
       "Filter:Size:L",
       "Filter:Size:M",
       "Filter:Size:S",
@@ -4611,7 +4554,7 @@
         "price": "148.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U3051R_07787_b1_s1_a2_m161.jpg?v=1762937385",
-        "available": false
+        "available": true
       }
     ]
   },
@@ -5011,15 +4954,11 @@
       "Computed:IsAlmostGone",
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:M",
-      "Computed:UnderInventoryThreshold:5:for:S",
       "Content:Builder",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
-      "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
       "Filter:Size:2XL",
-      "Filter:Size:L",
-      "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XL",
       "Filter:Size:XS",
@@ -5081,7 +5020,7 @@
         "price": "138.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U5012RG_06659_b1_s1_a3_m198.jpg?v=1762151245",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661762007399",
@@ -5424,8 +5363,6 @@
       "Content:Builder",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
-      "Filter:DisplaySize:4:Medium",
-      "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XS",
       "Filter:Size:XXS",
@@ -6026,15 +5963,16 @@
       "Color:Winter Frost:Color",
       "ColorGroup:Blue",
       "ColorwayType:Limited",
-      "Computed:IsAlmostGone",
-      "Computed:UnderInventoryThreshold:5:for:L",
-      "Computed:UnderInventoryThreshold:5:for:M",
-      "Computed:UnderInventoryThreshold:5:for:S",
       "Content:Builder",
       "D1WinterInitialQA2",
       "Filter:DisplaySize:1:XXS - XS",
+      "Filter:DisplaySize:3:Small",
+      "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
       "Filter:Size:2XL",
+      "Filter:Size:L",
+      "Filter:Size:M",
+      "Filter:Size:S",
       "Filter:Size:XL",
       "Filter:Size:XS",
       "JustDropped:New This Season",
@@ -6079,7 +6017,7 @@
         "price": "138.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U5012RG_06646_b1_s1_a2_m214.jpg?v=1761634085",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661759517031",
@@ -6087,7 +6025,7 @@
         "price": "138.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U5012RG_06646_b1_s1_a2_m214.jpg?v=1761634085",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661759549799",
@@ -6095,7 +6033,7 @@
         "price": "138.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U5012RG_06646_b1_s1_a2_m214.jpg?v=1761634085",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661759582567",
@@ -6561,15 +6499,11 @@
       "Computed:IsAlmostGone",
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:M",
-      "Computed:UnderInventoryThreshold:5:for:S",
       "Content:Builder",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
-      "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
       "Filter:Size:2XL",
-      "Filter:Size:L",
-      "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XL",
       "Filter:Size:XS",
@@ -6630,7 +6564,7 @@
         "price": "138.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U5012RG_06659_b2_s1_a1_m190.jpg?v=1762164691",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661757092199",
@@ -6773,6 +6707,7 @@
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
+      "Filter:Size:2XL",
       "Filter:Size:L",
       "Filter:Size:M",
       "Filter:Size:S",
@@ -6850,7 +6785,7 @@
         "price": "148.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U3051R_07787_b1_s1_a2_m214.jpg?v=1762937460",
-        "available": false
+        "available": true
       }
     ]
   },
@@ -7289,8 +7224,6 @@
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:S",
       "Filter:DisplaySize:4:Medium",
-      "Filter:DisplaySize:6:XL - 2XL",
-      "Filter:Size:2XL",
       "Filter:Size:M",
       "JustDropped:New This Season",
       "Maintenance:ColorwayProduct",
@@ -7346,7 +7279,7 @@
         "price": "118.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M3210R_06659_b1_s1_a2_m198.jpg?v=1762933540",
-        "available": true
+        "available": false
       }
     ]
   },
@@ -7472,15 +7405,16 @@
       "Color:Winter Frost:Color",
       "ColorGroup:Blue",
       "ColorwayType:Limited",
-      "Computed:IsAlmostGone",
-      "Computed:UnderInventoryThreshold:5:for:L",
-      "Computed:UnderInventoryThreshold:5:for:M",
-      "Computed:UnderInventoryThreshold:5:for:S",
       "Content:Builder",
       "D1WinterInitialQA2",
       "Filter:DisplaySize:1:XXS - XS",
+      "Filter:DisplaySize:3:Small",
+      "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
       "Filter:Size:2XL",
+      "Filter:Size:L",
+      "Filter:Size:M",
+      "Filter:Size:S",
       "Filter:Size:XL",
       "Filter:Size:XS",
       "JustDropped:New This Season",
@@ -7525,7 +7459,7 @@
         "price": "138.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U5012RG_06646_b2_s1_a1_m18.jpg?v=1761310676",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661754863975",
@@ -7533,7 +7467,7 @@
         "price": "138.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U5012RG_06646_b2_s1_a1_m18.jpg?v=1761310676",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661754896743",
@@ -7541,7 +7475,7 @@
         "price": "138.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/U5012RG_06646_b2_s1_a1_m18.jpg?v=1761310676",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661754929511",
@@ -7989,6 +7923,7 @@
     "product_type": "Women:Bottoms:Sweatpants",
     "tags": [
       "AccoladeBoostBury",
+      "b:1:Best Seller",
       "b:3:New",
       "BuilderDropzoneStyle:FYFASL",
       "BVCategory:Women",
@@ -8014,6 +7949,7 @@
       "not_clearance",
       "pricing:fullprice",
       "Status:Seasonal",
+      "Status:WBestSeller",
       "StyleId:U5006RG",
       "Waist:Regular Waist",
       "Women:Activity:Lounge",
@@ -8190,7 +8126,7 @@
     "title": "ALO Runner - Bright Red",
     "description": "Our first-ever performance shoe is engineered to support your body from the ground up, wherever your moving meditation takes you. Designed for stability and support on street, trail, track, or sand, the ALO Runner features a stabilizing heel clip, extra-firm cushioning at the heel, and a dual-density midsole designed for comfort and responsiveness. The breathable double-layer mesh upper optimizes air flow, and it\u2019s made with 70% recycled materials for a lighter footprint on the Earth.",
     "url": "https://www.aloyoga.com/products/a0590u-alo-runner-bright-red",
-    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0590U_06662_b1_s1_a1.jpg?v=1763637433",
+    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0590U_06662_b1_s1_a1.jpg?v=1765846197",
     "price_range": {
       "min": "195.0",
       "max": "195.0",
@@ -8293,7 +8229,7 @@
     "title": "Recovery Slipper - Espresso",
     "description": "Get ready to step into recovery mode. Meet the newest addition to the recovery lineup\u2014the Recovery Slipper. With its cloud-like sole and extra cozy exterior, every step you take will feel ultra-soft. Wear it from a workout session to a coffee date with ease.",
     "url": "https://www.aloyoga.com/products/a0827u-recovery-slipper-espresso",
-    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0827U_04064_b1_s1_a3.jpg?v=1762860028",
+    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0827U_04064_b1_s1_a3.jpg?v=1765845941",
     "price_range": {
       "min": "175.0",
       "max": "175.0",
@@ -8367,7 +8303,7 @@
     "title": "ALO Runner - Winter Frost",
     "description": "Our first-ever performance shoe is engineered to support your body from the ground up, wherever your moving meditation takes you. Designed for stability and support on street, trail, track, or sand, the ALO Runner features a stabilizing heel clip, extra-firm cushioning at the heel, and a dual-density midsole designed for comfort and responsiveness. The breathable double-layer mesh upper optimizes air flow, and it\u2019s made with 70% recycled materials for a lighter footprint on the Earth.",
     "url": "https://www.aloyoga.com/products/a0590u-alo-runner-winter-frost",
-    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0590U_06646_b1_s1_a2_4633e9b3-dda9-408e-9ee5-426346dcd0d5.jpg?v=1761674660",
+    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0590U_06646_b1_s1_a2_4633e9b3-dda9-408e-9ee5-426346dcd0d5.jpg?v=1765846291",
     "price_range": {
       "min": "195.0",
       "max": "195.0",
@@ -8439,6 +8375,8 @@
     ],
     "availabilityMatrix": [
       "Winter Frost/3M/4.5W",
+      "Winter Frost/5.5M/7W",
+      "Winter Frost/7M/8.5W",
       "Winter Frost/12.5M/14W",
       "Winter Frost/13.5M/15W",
       "Winter Frost/14M/15.5W",
@@ -8451,7 +8389,7 @@
     "title": "Recovery Slipper - Black",
     "description": "Get ready to step into recovery mode. Meet the newest addition to the recovery lineup\u2014the Recovery Slipper. With its cloud-like sole and extra cozy exterior, every step you take will feel ultra-soft. Wear it from a workout session to a coffee date with ease.",
     "url": "https://www.aloyoga.com/products/a0827u-recovery-slipper-black",
-    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0827U_01_b1_s1_a1_2b1002c7-2542-443f-8f27-26081e7d7284.jpg?v=1761674686",
+    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0827U_01_b1_s1_a1_2b1002c7-2542-443f-8f27-26081e7d7284.jpg?v=1765845714",
     "price_range": {
       "min": "175.0",
       "max": "175.0",
@@ -10723,9 +10661,7 @@
       "BVCategory:Accessories",
       "Color:White:Color",
       "ColorGroup:White",
-      "Computed:IsAlmostGone",
       "Computed:UnderInventoryThreshold:5:for:M",
-      "Computed:UnderInventoryThreshold:5:for:S",
       "Filter:Size:L",
       "Filter:Size:S",
       "JustDropped:New This Season",
@@ -12432,7 +12368,7 @@
         "price": "298.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0800UP_07910_b1_s1_a1.jpg?v=1765827876",
-        "available": false
+        "available": true
       }
     ]
   },
@@ -12489,7 +12425,7 @@
         "price": "298.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/A0800UP_07907_b1_s1_a1.jpg?v=1765829206",
-        "available": false
+        "available": true
       }
     ]
   },
@@ -13867,7 +13803,6 @@
       "Color:Winter Frost:Color",
       "ColorGroup:Blue",
       "ColorwayType:Limited",
-      "Computed:UnderInventoryThreshold:5:for:M",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:Large",
@@ -14312,10 +14247,10 @@
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:M",
       "Computed:UnderInventoryThreshold:5:for:S",
-      "Filter:DisplaySize:5:Large",
+      "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:6:XL - 2XL",
       "Filter:Size:2XL",
-      "Filter:Size:L",
+      "Filter:Size:S",
       "JustDropped:New This Season",
       "Maintenance:ColorwayProduct",
       "master-man-all",
@@ -14341,7 +14276,7 @@
         "price": "108.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M3193R_06659_b2_s1_a1_m208.jpg?v=1763420547",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661738381671",
@@ -14357,7 +14292,7 @@
         "price": "108.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M3193R_06659_b2_s1_a1_m208.jpg?v=1763420547",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661738447207",
@@ -14395,7 +14330,6 @@
       "ColorGroup:Blue",
       "ColorwayType:Limited",
       "Computed:UnderInventoryThreshold:5:for:L",
-      "Computed:UnderInventoryThreshold:5:for:M",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:Large",
@@ -15125,13 +15059,14 @@
       "Color:Brownstone:Color",
       "ColorGroup:Brown",
       "ColorwayType:Limited",
-      "Computed:IsAlmostGone",
       "Computed:UnderInventoryThreshold:5:for:M",
       "Filter:DisplaySize:3:Small",
+      "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:Large",
       "Filter:DisplaySize:6:XL - 2XL",
       "Filter:Size:2XL",
       "Filter:Size:L",
+      "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XL",
       "JustDropped:New This Season",
@@ -15164,7 +15099,7 @@
         "price": "188.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M3307R_06659_b2_s1_a1_m245_2627660a-4910-4941-83eb-e993ab1089e0.jpg?v=1763420501",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661736218983",
@@ -15208,8 +15143,6 @@
       "BVCategory:Men",
       "Color:Black:Color",
       "ColorGroup:Black",
-      "Computed:IsAlmostGone",
-      "Computed:UnderInventoryThreshold:5:for:L",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:Large",
@@ -15292,7 +15225,9 @@
       "BVCategory:Men",
       "Color:Ivory:Color",
       "ColorGroup:White",
-      "Computed:UnderInventoryThreshold:5:for:M",
+      "Computed:IsAlmostGone",
+      "Computed:UnderInventoryThreshold:5:for:L",
+      "Computed:UnderInventoryThreshold:5:for:S",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:Large",
@@ -15308,7 +15243,6 @@
       "Men:Activity:Lounge",
       "Men:Fashion",
       "not_clearance",
-      "Preorder",
       "pricing:fullprice",
       "Status:Seasonal",
       "StyleId:M3310R",
@@ -15380,10 +15314,12 @@
       "ColorwayType:Limited",
       "Computed:UnderInventoryThreshold:5:for:M",
       "Filter:DisplaySize:3:Small",
+      "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:Large",
       "Filter:DisplaySize:6:XL - 2XL",
       "Filter:Size:2XL",
       "Filter:Size:L",
+      "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XL",
       "JustDropped:New This Season",
@@ -15417,7 +15353,7 @@
         "price": "148.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M3310R_06659_b2_s1_a1_m214.jpg?v=1763420444",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661735727463",
@@ -15461,6 +15397,7 @@
       "BVCategory:Men",
       "Color:Black:Color",
       "ColorGroup:Black",
+      "Computed:UnderInventoryThreshold:5:for:S",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:Large",
@@ -15476,7 +15413,6 @@
       "Men:Activity:Lounge",
       "Men:Fashion",
       "not_clearance",
-      "Preorder",
       "pricing:fullprice",
       "Status:Seasonal",
       "StyleId:M3310R",
@@ -16060,8 +15996,10 @@
       "Computed:UnderInventoryThreshold:5:for:L",
       "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
+      "Filter:DisplaySize:5:Large",
       "Filter:DisplaySize:6:XL - 2XL",
       "Filter:Size:2XL",
+      "Filter:Size:L",
       "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XL",
@@ -16103,7 +16041,7 @@
         "price": "168.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M3320R_03842_b1_s1_a1_m214_00876b81-8a63-4e2f-99b6-318f28409cb1.jpg?v=1763428957",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661734449511",
@@ -16730,12 +16668,16 @@
       "ColorGroup:Black",
       "Computed:IsAlmostGone",
       "Computed:UnderInventoryThreshold:5:for:L",
-      "Computed:UnderInventoryThreshold:5:for:M",
       "Computed:UnderInventoryThreshold:5:for:S",
       "Filter:DisplaySize:3:Small",
+      "Filter:DisplaySize:4:Medium",
+      "Filter:DisplaySize:5:Large",
       "Filter:DisplaySize:6:XL - 2XL",
       "Filter:Size:2XL",
+      "Filter:Size:L",
+      "Filter:Size:M",
       "Filter:Size:S",
+      "Filter:Size:XL",
       "JustDropped:New This Season",
       "Maintenance:ColorwayProduct",
       "master-man-all",
@@ -16767,7 +16709,7 @@
         "price": "268.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M4206R_01_b2_s1_a1_m214.jpg?v=1762213335",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661732778343",
@@ -16775,7 +16717,7 @@
         "price": "268.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M4206R_01_b2_s1_a1_m214.jpg?v=1762213335",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661732811111",
@@ -16783,7 +16725,7 @@
         "price": "268.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M4206R_01_b2_s1_a1_m214.jpg?v=1762213335",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661732843879",
@@ -16909,7 +16851,6 @@
       "master-man-all",
       "Men:Fashion",
       "not_clearance",
-      "Preorder",
       "pricing:fullprice",
       "Status:Seasonal",
       "StyleId:M5013R",
@@ -17499,10 +17440,8 @@
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:M",
       "Filter:DisplaySize:3:Small",
-      "Filter:DisplaySize:5:Large",
       "Filter:DisplaySize:6:XL - 2XL",
       "Filter:Size:2XL",
-      "Filter:Size:L",
       "Filter:Size:S",
       "Filter:Size:XL",
       "JustDropped:New This Season",
@@ -17547,7 +17486,7 @@
         "price": "78.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/M6154R_06646_b2_s1_a1_m208.jpg?v=1762213393",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661730648423",
@@ -17762,11 +17701,12 @@
       "Color:Winter Frost:Color",
       "ColorGroup:Blue",
       "ColorwayType:Limited",
-      "Computed:UnderInventoryThreshold:5:for:M",
       "Computed:UnderInventoryThreshold:5:for:S",
       "Filter:DisplaySize:1:XXS - XS",
+      "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
       "Filter:Size:L",
+      "Filter:Size:M",
       "Filter:Size:XS",
       "Filter:Size:XXS",
       "JustDropped:New This Season",
@@ -17817,7 +17757,7 @@
         "price": "68.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W1430R_06646_b1_s1_a4_m209.jpg?v=1761296718",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661729861991",
@@ -17849,7 +17789,6 @@
       "Computed:IsAlmostGone",
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:M",
-      "Computed:UnderInventoryThreshold:5:for:S",
       "Content:Builder",
       "Fabric:Softsculpt",
       "Filter:DisplaySize:1:XXS - XS",
@@ -19633,10 +19572,8 @@
       "Computed:UnderInventoryThreshold:5:for:M",
       "Computed:UnderInventoryThreshold:5:for:S",
       "D1WinterInitialQA2",
-      "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
       "Filter:Size:L",
-      "Filter:Size:M",
       "JustDropped:New This Season",
       "Maintenance:ColorwayProduct",
       "master-woman-all",
@@ -19684,7 +19621,7 @@
         "price": "168.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W31007R_0939_b2_s1_a1_m18.jpg?v=1761569229",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661725929831",
@@ -19714,16 +19651,13 @@
       "ColorGroup:Blue",
       "ColorwayType:Limited",
       "Computed:IsAlmostGone",
+      "Computed:UnderInventoryThreshold:5:for:M",
       "Computed:UnderInventoryThreshold:5:for:S",
       "D1WinterInitialQA2",
-      "Filter:DisplaySize:1:XXS - XS",
-      "Filter:DisplaySize:3:Small",
       "Filter:DisplaySize:4:Medium",
       "Filter:DisplaySize:5:L - XL",
       "Filter:Size:L",
       "Filter:Size:M",
-      "Filter:Size:S",
-      "Filter:Size:XS",
       "JustDropped:New This Season",
       "Maintenance:ColorwayProduct",
       "master-woman-all",
@@ -19755,7 +19689,7 @@
         "price": "168.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W31007R_06646_b2_s1_a1_m18.jpg?v=1761569302",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661725700455",
@@ -19763,7 +19697,7 @@
         "price": "168.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W31007R_06646_b2_s1_a1_m18.jpg?v=1761569302",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661725733223",
@@ -19771,7 +19705,7 @@
         "price": "168.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W31007R_06646_b2_s1_a1_m18.jpg?v=1761569302",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661725765991",
@@ -19796,6 +19730,7 @@
     },
     "product_type": "Women:Outerwear:Coverups:Pullovers",
     "tags": [
+      "b:1:Best Seller",
       "b:3:New",
       "BVCategory:Women",
       "Color:Dark Heather Grey:Color",
@@ -19818,6 +19753,7 @@
       "not_clearance",
       "pricing:fullprice",
       "Status:Seasonal",
+      "Status:WBestSeller",
       "StyleId:W31007R",
       "Women:Fashion",
       "WT25-Campaign",
@@ -20410,7 +20346,6 @@
       "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XS",
-      "Filter:Size:XXS",
       "JustDropped:New This Month",
       "JustDropped:New This Season",
       "Maintenance:ColorwayProduct",
@@ -20434,7 +20369,7 @@
         "price": "448.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W31025P_03299_b1_s1_a1_m241_92ae39d0-f6d4-4abe-8fb7-ab92f55a4830.jpg?v=1765427887",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661724356967",
@@ -20589,7 +20524,6 @@
       "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XS",
-      "Filter:Size:XXS",
       "JustDropped:New This Month",
       "JustDropped:New This Season",
       "Maintenance:ColorwayProduct",
@@ -20615,7 +20549,7 @@
         "price": "378.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W31036P_07767_b2_s1_a2_m264.jpg?v=1764961522",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661724029287",
@@ -20760,7 +20694,6 @@
       "ColorGroup:Black",
       "Computed:IsAlmostGone",
       "Computed:UnderInventoryThreshold:5:for:L",
-      "Computed:UnderInventoryThreshold:5:for:M",
       "Content:Builder",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
@@ -21784,6 +21717,8 @@
       "Content:Builder",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
+      "Filter:DisplaySize:4:Medium",
+      "Filter:Size:M",
       "Filter:Size:S",
       "Filter:Size:XS",
       "JustDropped:New This Month",
@@ -21833,7 +21768,7 @@
         "price": "568.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W31069P_07910_b1_s1_a4_m176.jpg?v=1765384533",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/50661721506151",
@@ -22129,7 +22064,6 @@
       "Computed:IsAlmostGone",
       "Computed:UnderInventoryThreshold:5:for:L",
       "Computed:UnderInventoryThreshold:5:for:M",
-      "Computed:UnderInventoryThreshold:5:for:S",
       "Content:Builder",
       "Filter:DisplaySize:1:XXS - XS",
       "Filter:DisplaySize:3:Small",
@@ -22194,6 +22128,99 @@
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W31069P_01_b1_s1_a2_m18.jpg?v=1764247120",
         "available": false
+      }
+    ]
+  },
+  {
+    "product_id": "gid://shopify/Product/9092821254503",
+    "title": "Alosoft Crop Finesse Long Sleeve - Winter Frost",
+    "description": "From warm-up to workout to lounge, the Alosoft Crop Finesse Long Sleeve has your back. Yoga-level performance, super-soft feel, snug silhouette, check.",
+    "url": "https://www.aloyoga.com/products/w3601r-alosoft-crop-finesse-long-sleeve-winter-frost",
+    "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3601R_06646_b1_s1_a1_m209.jpg?v=1761558350",
+    "price_range": {
+      "min": "78.0",
+      "max": "78.0",
+      "currency": "USD"
+    },
+    "product_type": "Women:Tops:Long Sleeves",
+    "tags": [
+      "BuilderDropzoneStyle:ALOSOFT",
+      "BVCategory:Women",
+      "Color:Winter Frost:Color",
+      "ColorGroup:Blue",
+      "ColorwayType:Limited",
+      "Content:Builder",
+      "D1WinterInitialQA2",
+      "Fabric:Alosoft",
+      "Filter:DisplaySize:1:XXS - XS",
+      "Filter:DisplaySize:3:Small",
+      "Filter:DisplaySize:4:Medium",
+      "Filter:DisplaySize:5:L - XL",
+      "Filter:Size:L",
+      "Filter:Size:M",
+      "Filter:Size:S",
+      "Filter:Size:XS",
+      "Filter:Size:XXS",
+      "JustDropped:New This Season",
+      "Length:Cropped",
+      "Maintenance:ColorwayProduct",
+      "master-woman-all",
+      "not_clearance",
+      "pricing:fullprice",
+      "Status:Seasonal",
+      "StyleId:W3601R",
+      "Women:Activity:Court",
+      "Women:Activity:Lounge",
+      "Women:Activity:Pilates",
+      "Women:Activity:Yoga",
+      "Women:Performance",
+      "WT25D1-family",
+      "WT25Drops-family",
+      "WT25SeasonalBoost-BFCM",
+      "X:IsPublishedToOnlineStore",
+      "YCRF_reviews:women",
+      "YGroup_W3601R"
+    ],
+    "variants": [
+      {
+        "variant_id": "gid://shopify/ProductVariant/50661720555879",
+        "title": "Winter Frost / XXS",
+        "price": "78.0",
+        "currency": "USD",
+        "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3601R_06646_b1_s1_a1_m209.jpg?v=1761558350",
+        "available": true
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/50661720588647",
+        "title": "Winter Frost / XS",
+        "price": "78.0",
+        "currency": "USD",
+        "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3601R_06646_b1_s1_a1_m209.jpg?v=1761558350",
+        "available": true
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/50661720621415",
+        "title": "Winter Frost / S",
+        "price": "78.0",
+        "currency": "USD",
+        "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3601R_06646_b1_s1_a1_m209.jpg?v=1761558350",
+        "available": true
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/50661720654183",
+        "title": "Winter Frost / M",
+        "price": "78.0",
+        "currency": "USD",
+        "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3601R_06646_b1_s1_a1_m209.jpg?v=1761558350",
+        "available": true
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/50661720686951",
+        "title": "Winter Frost / L",
+        "price": "78.0",
+        "currency": "USD",
+        "image_url": "https://cdn.shopify.com/s/files/1/2185/2813/files/W3601R_06646_b1_s1_a1_m209.jpg?v=1761558350",
+        "available": true
       }
     ]
   }

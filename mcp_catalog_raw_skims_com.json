@@ -1957,7 +1957,7 @@
         "price": "95.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-LOUNGEWEAR-A8EDT-GUN.webp?v=1764179319",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896966300001",
@@ -2764,7 +2764,6 @@
       "collection-the-north-face-x-skims-baselayers",
       "collection-the-north-face-x-skims-one-pieces",
       "Config: Variant",
-      "core-instock",
       "drop-the-north-face-x-skims-12-25",
       "FilterCollection: The North Face x SKIMS",
       "FilterColor: Bone",
@@ -2775,6 +2774,7 @@
       "FilterStyle: Bodysuits",
       "FilterType: Bodysuits",
       "Header: the north face x skims",
+      "oos-core",
       "pdp-promo-delay",
       "preference-womens",
       "script-pdp-promo-delay",
@@ -4784,6 +4784,7 @@
       "collection-sleep-shop",
       "collection-the-sleep-edit",
       "Config: Variant",
+      "core-instock",
       "drop-holiday-shop-10-25",
       "emea-excluded",
       "FilterCollection: SKIMS Sleep",
@@ -4802,7 +4803,6 @@
       "Klaviyo back in stock",
       "low-stock",
       "online",
-      "oos-core",
       "pdp-promo-loyalty",
       "preference-womens",
       "retail-holiday-shop"
@@ -7785,6 +7785,7 @@
       "Header: nikeskims woven nylon",
       "Klaviyo back in stock",
       "online",
+      "oos-core",
       "pdp-promo-loyalty",
       "PLPMainImage: 6",
       "preference-womens",
@@ -12078,7 +12079,7 @@
         "price": "108.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-SLEEP-FLANNEL-ST-SST-10119-AHG-COMPOSITE_dbaac4c8-a9aa-455e-a6b7-b7087d295969.jpg?v=1764092490",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896904139105",
@@ -12086,7 +12087,7 @@
         "price": "108.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-SLEEP-FLANNEL-ST-SST-10119-AHG-COMPOSITE_dbaac4c8-a9aa-455e-a6b7-b7087d295969.jpg?v=1764092490",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896904171873",
@@ -13341,6 +13342,7 @@
       "collection-skims-holiday-must-haves",
       "collection-sleep-shop",
       "Config: Master",
+      "core-instock",
       "drop-holiday-shop-10-25",
       "FilterCollection: Flannel Sleep",
       "FilterColor: Red Holiday Plaid",
@@ -13358,7 +13360,6 @@
       "Klaviyo back in stock",
       "low-stock",
       "online",
-      "oos-core",
       "pdp-promo-loyalty",
       "preference-mens",
       "retail-holiday-shop"
@@ -13394,7 +13395,7 @@
         "price": "108.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-SLEEP-FLANNEL-PT-PNT-6004-RHD-COMPOSITE.jpg?v=1762291113",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896899944801",
@@ -13402,7 +13403,7 @@
         "price": "108.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-SLEEP-FLANNEL-PT-PNT-6004-RHD-COMPOSITE.jpg?v=1762291113",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896899977569",
@@ -14317,7 +14318,7 @@
         "price": "130.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-SLEEP-JERSEY-TP-SHR-6192-ESPPANT_COMPOSITE.jpg?v=1764092423",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896897552737",
@@ -14325,7 +14326,7 @@
         "price": "130.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-SLEEP-JERSEY-TP-SHR-6192-ESPPANT_COMPOSITE.jpg?v=1764092423",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896897585505",
@@ -14333,7 +14334,7 @@
         "price": "130.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-SLEEP-JERSEY-TP-SHR-6192-ESPPANT_COMPOSITE.jpg?v=1764092423",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896897618273",
@@ -15248,7 +15249,7 @@
         "price": "72.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-LOUNGEWEAR-LS-LST-11006M-GHP-FLT.jpg?v=1760553489",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896895160673",
@@ -18830,7 +18831,6 @@
       "Header: skims sleep",
       "Klaviyo back in stock",
       "online",
-      "oos-core",
       "pdp-promo-loyalty",
       "PLPMainImage: 6",
       "preference-womens",
@@ -19645,7 +19645,7 @@
         "price": "98.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-LOUNGEWEAR-TP-LSL-11148W-ONX-FLT_7aa2cde5-9687-4ebe-8232-0b16b715e0f1.jpg?v=1761861050",
-        "available": true
+        "available": false
       }
     ]
   },
@@ -21055,7 +21055,6 @@
       "Klaviyo back in stock",
       "low-stock",
       "online",
-      "oos-core",
       "pdp-promo-loyalty",
       "preference-womens",
       "tech-details"
@@ -22198,7 +22197,7 @@
         "price": "28.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-LOUNGEWEAR-OS-FUL-5764K-GLM.jpg?v=1761772629",
-        "available": true
+        "available": false
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896861311329",
@@ -22746,8 +22745,8 @@
       "FilterType: Tops",
       "Header: logo plush pointelle",
       "Klaviyo back in stock",
+      "low-stock",
       "online",
-      "oos-core",
       "pdp-promo-loyalty",
       "preference-womens",
       "retail-holiday-shop"
@@ -28790,7 +28789,7 @@
         "price": "130.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-LOUNGEWEAR-PL-PLO-8699M-NVY_7426cf4d-b68b-4e3f-90f2-230c364bb6ae.jpg?v=1760740488",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896843714913",
@@ -28798,7 +28797,7 @@
         "price": "130.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-LOUNGEWEAR-PL-PLO-8699M-NVY_7426cf4d-b68b-4e3f-90f2-230c364bb6ae.jpg?v=1760740488",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896843747681",
@@ -29192,6 +29191,7 @@
       "collection-menswear",
       "collection-online",
       "Config: Master",
+      "core-instock",
       "drop-new-arrivals-10-25",
       "FilterCollection: Heavyweight Fleece",
       "FilterColor: Navy",
@@ -29204,7 +29204,6 @@
       "Header: heavyweight fleece",
       "Klaviyo back in stock",
       "online",
-      "oos-core",
       "pdp-promo-loyalty",
       "preference-mens"
     ],
@@ -29231,7 +29230,7 @@
         "price": "120.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-LOUNGEWEAR-PT-PNT-8706M-NVY.jpg?v=1760740628",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896842469729",
@@ -29239,7 +29238,7 @@
         "price": "120.0",
         "currency": "USD",
         "image_url": "https://cdn.shopify.com/s/files/1/0259/5448/4284/files/SKIMS-LOUNGEWEAR-PT-PNT-8706M-NVY.jpg?v=1760740628",
-        "available": false
+        "available": true
       },
       {
         "variant_id": "gid://shopify/ProductVariant/47896842502497",
@@ -29417,7 +29416,6 @@
       "collection-nikeskims-shine",
       "collection-online",
       "Config: Variant",
-      "core-instock",
       "drop-nikeskims-11-25",
       "FilterCollection: NikeSKIMS Shine",
       "FilterColor: Dark Teal",
@@ -29433,6 +29431,7 @@
       "Klaviyo back in stock",
       "low-stock",
       "online",
+      "oos-core",
       "pdp-promo-loyalty",
       "PLPMainImage: 7",
       "preference-womens",

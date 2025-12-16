@@ -1,3 +1,6 @@
+// This file is currently not running with the setup
+// This can be invoked from server.js to only fetch Hexagon Shopify data
+
 import cron from 'node-cron';
 import { spawn } from 'child_process';
 import path from 'path';

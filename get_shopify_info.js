@@ -5,6 +5,16 @@ import express from 'express';
 import { writeFileSync } from 'fs';
 import process from 'process';
 
+if (!process.env.API_KEY) {
+  console.warn('API_KEY is not set.');
+}
+if (!process.env.SHOPIFY_API_SECRET) {
+  console.warn('SHOPIFY_API_SECRET is not set.');
+}
+if (!process.env.SHOPIFY_ACCESS_TOKEN) {
+  console.warn('SHOPIFY_ACCESS_TOKEN is not set.');
+}
+
 const shopify = shopifyApi({
   // The next 4 values are typically read from environment variables for added security
   apiKey: process.env.API_KEY,
